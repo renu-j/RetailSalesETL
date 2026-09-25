@@ -1,0 +1,3259 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="9/16/2026 10:22:39 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="ICS-LT-G2X1HK3"
+  DTS:CreatorName="INFICS\rejoshi"
+  DTS:DTSID="{668E72C4-071B-4556-B758-9309D5146E31}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="17.0.1016.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="LoadStores"
+  DTS:PackageType="5"
+  DTS:VersionBuild="63"
+  DTS:VersionGUID="{B626ED0C-1893-46A1-B8B0-657720A56DA9}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FF_Stores]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{89927E43-2FBF-464A-B8F7-637C54179965}"
+      DTS:ObjectName="FF_Stores">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\RetailETL\Input\Input\Stores.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="StoreID"
+              DTS:DTSID="{5ABD2289-9AC3-4DAD-90AA-C1B97606DE82}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="StoreName"
+              DTS:DTSID="{AFBB4C9A-D4A7-4334-A888-A85168452ECE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="City"
+              DTS:DTSID="{2AC79E6B-8366-4A5C-9A18-C28C477BCA01}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="State"
+              DTS:DTSID="{B38D9A1C-5A91-4984-829F-E9FFF4053A9A}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{DCFD0736-8FA5-47BC-823B-B09C385C4272}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\RetailETL\Input\Stores.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="StoreID"
+              DTS:DTSID="{65B4D71A-E70C-44E4-A90D-BB67F4B76FCB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="StoreName"
+              DTS:DTSID="{791FD2E0-ADD0-47E7-8C48-4ABA4C2D3191}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="City"
+              DTS:DTSID="{5B7EB713-215F-4532-95AC-92456B7044C8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="State"
+              DTS:DTSID="{E65585DF-BDD6-4632-BA48-A2A3CA5C7D0D}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ICS-LT-G2X1HK3\SQLEXPRESS.ETL_database.sa]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{31B640A1-4F5F-4EE1-A81F-243B13F2C35D}"
+      DTS:ObjectName="ICS-LT-G2X1HK3\SQLEXPRESS.ETL_database.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=ICS-LT-G2X1HK3\SQLEXPRESS;User ID=sa;Initial Catalog=ETL_database;Provider=MSOLEDBSQL19.1;Trust Server Certificate=True;Application Name=SSIS-LoadStores-{31B640A1-4F5F-4EE1-A81F-243B13F2C35D}ICS-LT-G2X1HK3\SQLEXPRESS.ETL_database.sa;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAWoPjJrq/8UyjbhHw82lxlAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAo8N7yXMBqOCLzgmKiX5Z/eIdF+tx5fRd1e4XEvIkO9QAAAAAOgAAAAAIAACAAAABZOU0DnYwMNhu++JAfo7s+8BF7dTQN7blC0BBnXh1rWjAAAADtZMPB3QaoJ35m20+LUXQTz8GD61tEXBs00ABNHAPumwz1bmTRiuooMWyzHgq4BJ1AAAAAKtPyieGZnWjbXkhDXMr+J/FCpMyVMwtglx3PWCKR7dGpc46gwrC+HjcRp7CDMgvMSE2oVpFuBHFRdPngWqNkOA</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ICS-LT-G2X1HK3\SQLEXPRESS.RetailDW.sa]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{34372887-33E4-4625-B47E-1F45807A6EB4}"
+      DTS:ObjectName="ICS-LT-G2X1HK3\SQLEXPRESS.RetailDW.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=ICS-LT-G2X1HK3\SQLEXPRESS;User ID=sa;Initial Catalog=RetailDW;Provider=MSOLEDBSQL.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-LoadStores-{34372887-33E4-4625-B47E-1F45807A6EB4}ICS-LT-G2X1HK3\SQLEXPRESS.RetailDW.sa;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAWoPjJrq/8UyjbhHw82lxlAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACOa53nwBhdeLI0bhUfznVNELSZkhqznN7m6Kvb7Arx3QAAAAAOgAAAAAIAACAAAAAEa71X/4pn0DwzWhPTVK8wXNO+rdCMZ9ZVovfgxe2bmzAAAADoHHP+PebChQFQJFqImgzosmfSYm+OFUqg9dcMBbpapYlH1zNvEZZHUDCyvocHe7hAAAAAt3F0a5n6HDXluAgcfr+a2zEjnQ5tjqfdWdoUMGnzWjnc5xTEzW/SPR6a2VbEQEyO46bIoBUo63T4bMjujCX9VA</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ICS-LT-G2X1HK3\SQLEXPRESS.RetailDW.sa 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{F3DBC812-9885-4202-8471-41514599B2BD}"
+      DTS:ObjectName="ICS-LT-G2X1HK3\SQLEXPRESS.RetailDW.sa 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=ICS-LT-G2X1HK3\SQLEXPRESS;User ID=sa;Initial Catalog=RetailDW;Provider=MSOLEDBSQL.1;Application Name=SSIS-LoadStores-{F3DBC812-9885-4202-8471-41514599B2BD}ICS-LT-G2X1HK3\SQLEXPRESS.RetailDW.sa 1;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAWoPjJrq/8UyjbhHw82lxlAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACP5uwE3APYpXA74lamoULRSdaxHsfxkYa5t1juMyGgEgAAAAAOgAAAAAIAACAAAAA9jJdgscWMdlhE1/vHe6kna9EFQFv8LcDSB8Ou8q1/tDAAAADbs4kmNVDBBXvHDG5WRYwTAeBtCeYvB6kunWwTHko3o2vATnm8lx+EEGU1jw2y83NAAAAAPuIex/hn+V8/MnyhtYO6V6duQ+Oi3o5PPrHrXDpz25JQkypnZLWRbzN6gfWzMQj4eb6ivSRo1AqZOv9vhBeS6w</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ICS-LT-G2X1HK3\SQLEXPRESS.RetailDW.sa 2]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{E6459AB7-C687-4563-A320-F1BEFDF6D19E}"
+      DTS:ObjectName="ICS-LT-G2X1HK3\SQLEXPRESS.RetailDW.sa 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=ICS-LT-G2X1HK3\SQLEXPRESS;User ID=sa;Initial Catalog=RetailDW;Provider=MSOLEDBSQL.1;Application Name=SSIS-LoadStores-{E6459AB7-C687-4563-A320-F1BEFDF6D19E}ICS-LT-G2X1HK3\SQLEXPRESS.RetailDW.sa 2;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAWoPjJrq/8UyjbhHw82lxlAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAIRNXuQ0aK46eAvvqXsnq4LuJ44V27sxYk+AbM+VzHhgAAAAAOgAAAAAIAACAAAAC9zho9UvhqvY54SWFeAqtQdRD/cT3PbHNGsywToqPDyzAAAADqqn3Mg9d6Jn0g5lNKXXOg0HZX5XXq7LrJmm5P6fZ79zO+8pj5aeY4b4zFgTjW7S1AAAAAhfKaK1sggNpG1fgNWNhpO98uDaY7JXxLiEuBQAz+KEeFB3/DO10mP1w+bk0BbTBbKPjEG4wBjO6Zx1fUjY+g7g</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{8B49B7A8-7A86-4394-958D-1102203DF06F}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="@[$Project::p_ArchiveFolder] + @[User::CurrentStoreFile]"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ArchiveStorePath">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\RetailETL\Archive\Stores.csv</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{46646967-690A-4A1C-AA94-0DD5A81694BA}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="CurrentStoreFile">
+      <DTS:VariableValue
+        DTS:DataType="8">Stores.csv</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{7897CAB3-4B05-435F-B1BE-C8FDA175EE8E}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="@[$Project::p_SourceFolder] + @[User::CurrentStoreFile]"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="CurrentStorePath">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\RetailETL\Input\Stores.csv</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{C167F604-C6DD-464E-A175-53EF10177292}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="@[$Project::p_ErrorFolder] + @[User::CurrentStoreFile]"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ErrorStorePath">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\RetailETL\Error\Stores.csv</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DF_Store_Staging"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{01f04f48-2147-4aa5-8d13-90e2c7ac6c42}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DF_Store_Staging"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DF_Store_Staging\DC_StoreSourceFile"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="DC_StoreSourceFile"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DF_Store_Staging\DC_StoreSourceFile.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DF_Store_Staging\DC_StoreSourceFile.Inputs[Data Conversion Input].Columns[LoadSourceFile]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="LoadSourceFile"
+                      lineageId="Package\DF_Store_Staging\DER_SetSourceFile.Outputs[Derived Column Output].Columns[LoadSourceFile]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DF_Store_Staging\DC_StoreSourceFile.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\DF_Store_Staging\DC_StoreSourceFile.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF_Store_Staging\DC_StoreSourceFile.Outputs[Data Conversion Output].Columns[SourceFile_Converted]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\DF_Store_Staging\DC_StoreSourceFile.Outputs[Data Conversion Output].Columns[SourceFile_Converted]"
+                      name="SourceFile_Converted"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DF_Store_Staging\DER_SetSourceFile.Outputs[Derived Column Output].Columns[LoadSourceFile]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DF_Store_Staging\DC_StoreSourceFile.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\DF_Store_Staging\DC_StoreSourceFile.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF_Store_Staging\DC_StoreSourceFile.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DF_Store_Staging\DC_StoreSourceFile.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DF_Store_Staging\DC_StoreSourceFile.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DF_Store_Staging\DC_StoreSourceFile.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DF_Store_Staging\DER_SetSourceFile"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="DER_SetSourceFile"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DF_Store_Staging\DER_SetSourceFile.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DF_Store_Staging\DER_SetSourceFile.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\DF_Store_Staging\DER_SetSourceFile.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF_Store_Staging\DER_SetSourceFile.Outputs[Derived Column Output].Columns[LoadSourceFile]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\DF_Store_Staging\DER_SetSourceFile.Outputs[Derived Column Output].Columns[LoadSourceFile]"
+                      name="LoadSourceFile"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"Stores.csv"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"Stores.csv"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DF_Store_Staging\DER_SetSourceFile.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\DF_Store_Staging\DER_SetSourceFile.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF_Store_Staging\DER_SetSourceFile.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DF_Store_Staging\DER_SetSourceFile.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DF_Store_Staging\DER_SetSourceFile.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DF_Store_Staging\DER_SetSourceFile.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DF_Store_Staging\DST_StgStore"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="DST_StgStore"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[StgStore]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DF_Store_Staging\DST_StgStore.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ICS-LT-G2X1HK3\SQLEXPRESS.RetailDW.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[ICS-LT-G2X1HK3\SQLEXPRESS.RetailDW.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DF_Store_Staging\DST_StgStore.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DF_Store_Staging\DST_StgStore.Inputs[OLE DB Destination Input].Columns[StoreID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="StoreID"
+                      externalMetadataColumnId="Package\DF_Store_Staging\DST_StgStore.Inputs[OLE DB Destination Input].ExternalColumns[StoreID]"
+                      lineageId="Package\DF_Store_Staging\SRC_Stores.Outputs[Flat File Source Output].Columns[StoreID]" />
+                    <inputColumn
+                      refId="Package\DF_Store_Staging\DST_StgStore.Inputs[OLE DB Destination Input].Columns[StoreName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="StoreName"
+                      externalMetadataColumnId="Package\DF_Store_Staging\DST_StgStore.Inputs[OLE DB Destination Input].ExternalColumns[StoreName]"
+                      lineageId="Package\DF_Store_Staging\SRC_Stores.Outputs[Flat File Source Output].Columns[StoreName]" />
+                    <inputColumn
+                      refId="Package\DF_Store_Staging\DST_StgStore.Inputs[OLE DB Destination Input].Columns[City]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="City"
+                      externalMetadataColumnId="Package\DF_Store_Staging\DST_StgStore.Inputs[OLE DB Destination Input].ExternalColumns[City]"
+                      lineageId="Package\DF_Store_Staging\SRC_Stores.Outputs[Flat File Source Output].Columns[City]" />
+                    <inputColumn
+                      refId="Package\DF_Store_Staging\DST_StgStore.Inputs[OLE DB Destination Input].Columns[State]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="State"
+                      externalMetadataColumnId="Package\DF_Store_Staging\DST_StgStore.Inputs[OLE DB Destination Input].ExternalColumns[State]"
+                      lineageId="Package\DF_Store_Staging\SRC_Stores.Outputs[Flat File Source Output].Columns[State]" />
+                    <inputColumn
+                      refId="Package\DF_Store_Staging\DST_StgStore.Inputs[OLE DB Destination Input].Columns[SourceFile_Converted]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="SourceFile_Converted"
+                      externalMetadataColumnId="Package\DF_Store_Staging\DST_StgStore.Inputs[OLE DB Destination Input].ExternalColumns[SourceFile]"
+                      lineageId="Package\DF_Store_Staging\DC_StoreSourceFile.Outputs[Data Conversion Output].Columns[SourceFile_Converted]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DF_Store_Staging\DST_StgStore.Inputs[OLE DB Destination Input].ExternalColumns[StgStoreID]"
+                      dataType="i4"
+                      name="StgStoreID" />
+                    <externalMetadataColumn
+                      refId="Package\DF_Store_Staging\DST_StgStore.Inputs[OLE DB Destination Input].ExternalColumns[StoreID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="StoreID" />
+                    <externalMetadataColumn
+                      refId="Package\DF_Store_Staging\DST_StgStore.Inputs[OLE DB Destination Input].ExternalColumns[StoreName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="200"
+                      name="StoreName" />
+                    <externalMetadataColumn
+                      refId="Package\DF_Store_Staging\DST_StgStore.Inputs[OLE DB Destination Input].ExternalColumns[City]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="City" />
+                    <externalMetadataColumn
+                      refId="Package\DF_Store_Staging\DST_StgStore.Inputs[OLE DB Destination Input].ExternalColumns[State]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="State" />
+                    <externalMetadataColumn
+                      refId="Package\DF_Store_Staging\DST_StgStore.Inputs[OLE DB Destination Input].ExternalColumns[SourceFile]"
+                      codePage="1252"
+                      dataType="str"
+                      length="500"
+                      name="SourceFile" />
+                    <externalMetadataColumn
+                      refId="Package\DF_Store_Staging\DST_StgStore.Inputs[OLE DB Destination Input].ExternalColumns[LoadDate]"
+                      dataType="dbTimeStamp2"
+                      name="LoadDate"
+                      scale="7" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DF_Store_Staging\DST_StgStore.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\DF_Store_Staging\DST_StgStore.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF_Store_Staging\DST_StgStore.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DF_Store_Staging\DST_StgStore.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DF_Store_Staging\DST_StgStore.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DF_Store_Staging\DST_StgStore.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DF_Store_Staging\SRC_Stores"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="SRC_Stores"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DF_Store_Staging\SRC_Stores.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DF_Store_Staging\SRC_Stores.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF_Store_Staging\SRC_Stores.Outputs[Flat File Source Output].Columns[StoreID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF_Store_Staging\SRC_Stores.Outputs[Flat File Source Output].ExternalColumns[StoreID]"
+                      length="50"
+                      lineageId="Package\DF_Store_Staging\SRC_Stores.Outputs[Flat File Source Output].Columns[StoreID]"
+                      name="StoreID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF_Store_Staging\SRC_Stores.Outputs[Flat File Source Output].Columns[StoreName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF_Store_Staging\SRC_Stores.Outputs[Flat File Source Output].ExternalColumns[StoreName]"
+                      length="50"
+                      lineageId="Package\DF_Store_Staging\SRC_Stores.Outputs[Flat File Source Output].Columns[StoreName]"
+                      name="StoreName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF_Store_Staging\SRC_Stores.Outputs[Flat File Source Output].Columns[City]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF_Store_Staging\SRC_Stores.Outputs[Flat File Source Output].ExternalColumns[City]"
+                      length="50"
+                      lineageId="Package\DF_Store_Staging\SRC_Stores.Outputs[Flat File Source Output].Columns[City]"
+                      name="City"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF_Store_Staging\SRC_Stores.Outputs[Flat File Source Output].Columns[State]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF_Store_Staging\SRC_Stores.Outputs[Flat File Source Output].ExternalColumns[State]"
+                      length="50"
+                      lineageId="Package\DF_Store_Staging\SRC_Stores.Outputs[Flat File Source Output].Columns[State]"
+                      name="State"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DF_Store_Staging\SRC_Stores.Outputs[Flat File Source Output].ExternalColumns[StoreID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="StoreID" />
+                    <externalMetadataColumn
+                      refId="Package\DF_Store_Staging\SRC_Stores.Outputs[Flat File Source Output].ExternalColumns[StoreName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="StoreName" />
+                    <externalMetadataColumn
+                      refId="Package\DF_Store_Staging\SRC_Stores.Outputs[Flat File Source Output].ExternalColumns[City]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="City" />
+                    <externalMetadataColumn
+                      refId="Package\DF_Store_Staging\SRC_Stores.Outputs[Flat File Source Output].ExternalColumns[State]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="State" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DF_Store_Staging\SRC_Stores.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF_Store_Staging\SRC_Stores.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\DF_Store_Staging\SRC_Stores.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\DF_Store_Staging\SRC_Stores.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DF_Store_Staging\SRC_Stores.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DF_Store_Staging\SRC_Stores.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DF_Store_Staging\SRC_Stores.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DF_Store_Staging.Paths[Data Conversion Output]"
+              endId="Package\DF_Store_Staging\DST_StgStore.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\DF_Store_Staging\DC_StoreSourceFile.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\DF_Store_Staging.Paths[Derived Column Output]"
+              endId="Package\DF_Store_Staging\DC_StoreSourceFile.Inputs[Data Conversion Input]"
+              name="Derived Column Output"
+              startId="Package\DF_Store_Staging\DER_SetSourceFile.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_Store_Staging.Paths[Flat File Source Output]"
+              endId="Package\DF_Store_Staging\DER_SetSourceFile.Inputs[Derived Column Input]"
+              name="Flat File Source Output"
+              startId="Package\DF_Store_Staging\SRC_Stores.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\DF_Store_Validation"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{f238fddc-795e-4b92-bcea-9f3408516ce6}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DF_Store_Validation"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DF_Store_Validation\CS_StoreValidation"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="CS_StoreValidation"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DF_Store_Validation\CS_StoreValidation.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DF_Store_Validation\CS_StoreValidation.Inputs[Conditional Split Input].Columns[StoreID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="StoreID"
+                      lineageId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Output].Columns[StoreID]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DF_Store_Validation\CS_StoreValidation.Outputs[Invalid_Store]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Invalid_Store"
+                  synchronousInputId="Package\DF_Store_Validation\CS_StoreValidation.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">[ISNULL](#{Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Output].Columns[StoreID]}) || [LEN]([LTRIM]([RTRIM](#{Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Output].Columns[StoreID]}))) == 0</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">ISNULL(StoreID) || LEN(LTRIM(RTRIM(StoreID))) == 0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DF_Store_Validation\CS_StoreValidation.Outputs[Valid_Store]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Valid_Store"
+                  synchronousInputId="Package\DF_Store_Validation\CS_StoreValidation.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DF_Store_Validation\CS_StoreValidation.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\DF_Store_Validation\CS_StoreValidation.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF_Store_Validation\CS_StoreValidation.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DF_Store_Validation\CS_StoreValidation.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DF_Store_Validation\CS_StoreValidation.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DF_Store_Validation\CS_StoreValidation.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DF_Store_Validation\DC_Store"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="DC_Store"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DF_Store_Validation\DC_Store.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DF_Store_Validation\DC_Store.Inputs[Data Conversion Input].Columns[StoreID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="StoreID"
+                      lineageId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Output].Columns[StoreID]" />
+                    <inputColumn
+                      refId="Package\DF_Store_Validation\DC_Store.Inputs[Data Conversion Input].Columns[StoreName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="200"
+                      cachedName="StoreName"
+                      lineageId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Output].Columns[StoreName]" />
+                    <inputColumn
+                      refId="Package\DF_Store_Validation\DC_Store.Inputs[Data Conversion Input].Columns[City]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="City"
+                      lineageId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Output].Columns[City]" />
+                    <inputColumn
+                      refId="Package\DF_Store_Validation\DC_Store.Inputs[Data Conversion Input].Columns[State]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="State"
+                      lineageId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Output].Columns[State]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DF_Store_Validation\DC_Store.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\DF_Store_Validation\DC_Store.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF_Store_Validation\DC_Store.Outputs[Data Conversion Output].Columns[StoreID_Converted]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\DF_Store_Validation\DC_Store.Outputs[Data Conversion Output].Columns[StoreID_Converted]"
+                      name="StoreID_Converted"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Output].Columns[StoreID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF_Store_Validation\DC_Store.Outputs[Data Conversion Output].Columns[StoreName_Converted]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="200"
+                      lineageId="Package\DF_Store_Validation\DC_Store.Outputs[Data Conversion Output].Columns[StoreName_Converted]"
+                      name="StoreName_Converted"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Output].Columns[StoreName]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF_Store_Validation\DC_Store.Outputs[Data Conversion Output].Columns[City_Converted]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="100"
+                      lineageId="Package\DF_Store_Validation\DC_Store.Outputs[Data Conversion Output].Columns[City_Converted]"
+                      name="City_Converted"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Output].Columns[City]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF_Store_Validation\DC_Store.Outputs[Data Conversion Output].Columns[State_Converted]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="100"
+                      lineageId="Package\DF_Store_Validation\DC_Store.Outputs[Data Conversion Output].Columns[State_Converted]"
+                      name="State_Converted"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Output].Columns[State]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DF_Store_Validation\DC_Store.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\DF_Store_Validation\DC_Store.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF_Store_Validation\DC_Store.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DF_Store_Validation\DC_Store.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DF_Store_Validation\DC_Store.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DF_Store_Validation\DC_Store.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DF_Store_Validation\DC_StoreReject"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="DC_StoreReject"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DF_Store_Validation\DC_StoreReject.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DF_Store_Validation\DC_StoreReject.Inputs[Data Conversion Input].Columns[SourceFile]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="500"
+                      cachedName="SourceFile"
+                      lineageId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Output].Columns[SourceFile]" />
+                    <inputColumn
+                      refId="Package\DF_Store_Validation\DC_StoreReject.Inputs[Data Conversion Input].Columns[RejectEntityType]"
+                      cachedDataType="wstr"
+                      cachedLength="5"
+                      cachedName="RejectEntityType"
+                      lineageId="Package\DF_Store_Validation\DER_Reject_Store.Outputs[Derived Column Output].Columns[RejectEntityType]" />
+                    <inputColumn
+                      refId="Package\DF_Store_Validation\DC_StoreReject.Inputs[Data Conversion Input].Columns[RejectRecordKey]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="RejectRecordKey"
+                      lineageId="Package\DF_Store_Validation\DER_Reject_Store.Outputs[Derived Column Output].Columns[RejectRecordKey]" />
+                    <inputColumn
+                      refId="Package\DF_Store_Validation\DC_StoreReject.Inputs[Data Conversion Input].Columns[RejectReason]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="RejectReason"
+                      lineageId="Package\DF_Store_Validation\DER_Reject_Store.Outputs[Derived Column Output].Columns[RejectReason]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DF_Store_Validation\DC_StoreReject.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\DF_Store_Validation\DC_StoreReject.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF_Store_Validation\DC_StoreReject.Outputs[Data Conversion Output].Columns[SourceFile_Converted]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="250"
+                      lineageId="Package\DF_Store_Validation\DC_StoreReject.Outputs[Data Conversion Output].Columns[SourceFile_Converted]"
+                      name="SourceFile_Converted"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Output].Columns[SourceFile]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF_Store_Validation\DC_StoreReject.Outputs[Data Conversion Output].Columns[RejectEntityType_Converted]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DF_Store_Validation\DC_StoreReject.Outputs[Data Conversion Output].Columns[RejectEntityType_Converted]"
+                      name="RejectEntityType_Converted"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DF_Store_Validation\DER_Reject_Store.Outputs[Derived Column Output].Columns[RejectEntityType]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF_Store_Validation\DC_StoreReject.Outputs[Data Conversion Output].Columns[RejectRecordKey_Converted]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="100"
+                      lineageId="Package\DF_Store_Validation\DC_StoreReject.Outputs[Data Conversion Output].Columns[RejectRecordKey_Converted]"
+                      name="RejectRecordKey_Converted"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DF_Store_Validation\DER_Reject_Store.Outputs[Derived Column Output].Columns[RejectRecordKey]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF_Store_Validation\DC_StoreReject.Outputs[Data Conversion Output].Columns[RejectReason_Converted]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="500"
+                      lineageId="Package\DF_Store_Validation\DC_StoreReject.Outputs[Data Conversion Output].Columns[RejectReason_Converted]"
+                      name="RejectReason_Converted"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DF_Store_Validation\DER_Reject_Store.Outputs[Derived Column Output].Columns[RejectReason]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DF_Store_Validation\DC_StoreReject.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\DF_Store_Validation\DC_StoreReject.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF_Store_Validation\DC_StoreReject.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DF_Store_Validation\DC_StoreReject.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DF_Store_Validation\DC_StoreReject.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DF_Store_Validation\DC_StoreReject.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DF_Store_Validation\DER_Reject_Store"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="DER_Reject_Store"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DF_Store_Validation\DER_Reject_Store.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DF_Store_Validation\DER_Reject_Store.Inputs[Derived Column Input].Columns[StoreID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="StoreID"
+                      lineageId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Output].Columns[StoreID]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DF_Store_Validation\DER_Reject_Store.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\DF_Store_Validation\DER_Reject_Store.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF_Store_Validation\DER_Reject_Store.Outputs[Derived Column Output].Columns[RejectReason]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="15"
+                      lineageId="Package\DF_Store_Validation\DER_Reject_Store.Outputs[Derived Column Output].Columns[RejectReason]"
+                      name="RejectReason"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"Invalid StoreID"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"Invalid StoreID"</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF_Store_Validation\DER_Reject_Store.Outputs[Derived Column Output].Columns[RejectEntityType]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="5"
+                      lineageId="Package\DF_Store_Validation\DER_Reject_Store.Outputs[Derived Column Output].Columns[RejectEntityType]"
+                      name="RejectEntityType"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"Store"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"Store"</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF_Store_Validation\DER_Reject_Store.Outputs[Derived Column Output].Columns[RejectRecordKey]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DF_Store_Validation\DER_Reject_Store.Outputs[Derived Column Output].Columns[RejectRecordKey]"
+                      name="RejectRecordKey"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Output].Columns[StoreID]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">StoreID</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DF_Store_Validation\DER_Reject_Store.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\DF_Store_Validation\DER_Reject_Store.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF_Store_Validation\DER_Reject_Store.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DF_Store_Validation\DER_Reject_Store.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DF_Store_Validation\DER_Reject_Store.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DF_Store_Validation\DER_Reject_Store.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DF_Store_Validation\DST_DimStore"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="DST_DimStore"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DimStore]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DF_Store_Validation\DST_DimStore.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ICS-LT-G2X1HK3\SQLEXPRESS.RetailDW.sa 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[ICS-LT-G2X1HK3\SQLEXPRESS.RetailDW.sa 1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DF_Store_Validation\DST_DimStore.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DF_Store_Validation\DST_DimStore.Inputs[OLE DB Destination Input].Columns[StoreID_Converted]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="StoreID_Converted"
+                      externalMetadataColumnId="Package\DF_Store_Validation\DST_DimStore.Inputs[OLE DB Destination Input].ExternalColumns[StoreID]"
+                      lineageId="Package\DF_Store_Validation\DC_Store.Outputs[Data Conversion Output].Columns[StoreID_Converted]" />
+                    <inputColumn
+                      refId="Package\DF_Store_Validation\DST_DimStore.Inputs[OLE DB Destination Input].Columns[StoreName_Converted]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="200"
+                      cachedName="StoreName_Converted"
+                      externalMetadataColumnId="Package\DF_Store_Validation\DST_DimStore.Inputs[OLE DB Destination Input].ExternalColumns[StoreName]"
+                      lineageId="Package\DF_Store_Validation\DC_Store.Outputs[Data Conversion Output].Columns[StoreName_Converted]" />
+                    <inputColumn
+                      refId="Package\DF_Store_Validation\DST_DimStore.Inputs[OLE DB Destination Input].Columns[City_Converted]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="City_Converted"
+                      externalMetadataColumnId="Package\DF_Store_Validation\DST_DimStore.Inputs[OLE DB Destination Input].ExternalColumns[City]"
+                      lineageId="Package\DF_Store_Validation\DC_Store.Outputs[Data Conversion Output].Columns[City_Converted]" />
+                    <inputColumn
+                      refId="Package\DF_Store_Validation\DST_DimStore.Inputs[OLE DB Destination Input].Columns[State_Converted]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="State_Converted"
+                      externalMetadataColumnId="Package\DF_Store_Validation\DST_DimStore.Inputs[OLE DB Destination Input].ExternalColumns[State]"
+                      lineageId="Package\DF_Store_Validation\DC_Store.Outputs[Data Conversion Output].Columns[State_Converted]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DF_Store_Validation\DST_DimStore.Inputs[OLE DB Destination Input].ExternalColumns[StoreKey]"
+                      dataType="i4"
+                      name="StoreKey" />
+                    <externalMetadataColumn
+                      refId="Package\DF_Store_Validation\DST_DimStore.Inputs[OLE DB Destination Input].ExternalColumns[StoreID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="StoreID" />
+                    <externalMetadataColumn
+                      refId="Package\DF_Store_Validation\DST_DimStore.Inputs[OLE DB Destination Input].ExternalColumns[StoreName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="200"
+                      name="StoreName" />
+                    <externalMetadataColumn
+                      refId="Package\DF_Store_Validation\DST_DimStore.Inputs[OLE DB Destination Input].ExternalColumns[City]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="City" />
+                    <externalMetadataColumn
+                      refId="Package\DF_Store_Validation\DST_DimStore.Inputs[OLE DB Destination Input].ExternalColumns[State]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="State" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DF_Store_Validation\DST_DimStore.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\DF_Store_Validation\DST_DimStore.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF_Store_Validation\DST_DimStore.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DF_Store_Validation\DST_DimStore.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DF_Store_Validation\DST_DimStore.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DF_Store_Validation\DST_DimStore.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DF_Store_Validation\REJ_Store"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="REJ_Store"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[RejectedRecords]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DF_Store_Validation\REJ_Store.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ICS-LT-G2X1HK3\SQLEXPRESS.RetailDW.sa 2]"
+                  connectionManagerRefId="Package.ConnectionManagers[ICS-LT-G2X1HK3\SQLEXPRESS.RetailDW.sa 2]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DF_Store_Validation\REJ_Store.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DF_Store_Validation\REJ_Store.Inputs[OLE DB Destination Input].Columns[SourceFile_Converted]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="250"
+                      cachedName="SourceFile_Converted"
+                      externalMetadataColumnId="Package\DF_Store_Validation\REJ_Store.Inputs[OLE DB Destination Input].ExternalColumns[SourceFile]"
+                      lineageId="Package\DF_Store_Validation\DC_StoreReject.Outputs[Data Conversion Output].Columns[SourceFile_Converted]" />
+                    <inputColumn
+                      refId="Package\DF_Store_Validation\REJ_Store.Inputs[OLE DB Destination Input].Columns[RejectEntityType_Converted]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="RejectEntityType_Converted"
+                      externalMetadataColumnId="Package\DF_Store_Validation\REJ_Store.Inputs[OLE DB Destination Input].ExternalColumns[EntityType]"
+                      lineageId="Package\DF_Store_Validation\DC_StoreReject.Outputs[Data Conversion Output].Columns[RejectEntityType_Converted]" />
+                    <inputColumn
+                      refId="Package\DF_Store_Validation\REJ_Store.Inputs[OLE DB Destination Input].Columns[RejectRecordKey_Converted]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="RejectRecordKey_Converted"
+                      externalMetadataColumnId="Package\DF_Store_Validation\REJ_Store.Inputs[OLE DB Destination Input].ExternalColumns[RecordKey]"
+                      lineageId="Package\DF_Store_Validation\DC_StoreReject.Outputs[Data Conversion Output].Columns[RejectRecordKey_Converted]" />
+                    <inputColumn
+                      refId="Package\DF_Store_Validation\REJ_Store.Inputs[OLE DB Destination Input].Columns[RejectReason_Converted]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="500"
+                      cachedName="RejectReason_Converted"
+                      externalMetadataColumnId="Package\DF_Store_Validation\REJ_Store.Inputs[OLE DB Destination Input].ExternalColumns[ErrorReason]"
+                      lineageId="Package\DF_Store_Validation\DC_StoreReject.Outputs[Data Conversion Output].Columns[RejectReason_Converted]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DF_Store_Validation\REJ_Store.Inputs[OLE DB Destination Input].ExternalColumns[RejectedID]"
+                      dataType="i4"
+                      name="RejectedID" />
+                    <externalMetadataColumn
+                      refId="Package\DF_Store_Validation\REJ_Store.Inputs[OLE DB Destination Input].ExternalColumns[SourceFile]"
+                      codePage="1252"
+                      dataType="str"
+                      length="500"
+                      name="SourceFile" />
+                    <externalMetadataColumn
+                      refId="Package\DF_Store_Validation\REJ_Store.Inputs[OLE DB Destination Input].ExternalColumns[EntityType]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="EntityType" />
+                    <externalMetadataColumn
+                      refId="Package\DF_Store_Validation\REJ_Store.Inputs[OLE DB Destination Input].ExternalColumns[RecordKey]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="RecordKey" />
+                    <externalMetadataColumn
+                      refId="Package\DF_Store_Validation\REJ_Store.Inputs[OLE DB Destination Input].ExternalColumns[ErrorReason]"
+                      codePage="1252"
+                      dataType="str"
+                      length="500"
+                      name="ErrorReason" />
+                    <externalMetadataColumn
+                      refId="Package\DF_Store_Validation\REJ_Store.Inputs[OLE DB Destination Input].ExternalColumns[ErrorDate]"
+                      dataType="dbTimeStamp"
+                      name="ErrorDate" />
+                    <externalMetadataColumn
+                      refId="Package\DF_Store_Validation\REJ_Store.Inputs[OLE DB Destination Input].ExternalColumns[RawRowData]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1000"
+                      name="RawRowData" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DF_Store_Validation\REJ_Store.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\DF_Store_Validation\REJ_Store.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF_Store_Validation\REJ_Store.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DF_Store_Validation\REJ_Store.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DF_Store_Validation\REJ_Store.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DF_Store_Validation\REJ_Store.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DF_Store_Validation\SRC_StgStore"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="SRC_StgStore"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT
+    StgStoreID,
+    StoreID,
+    StoreName,
+    City,
+    State,
+    SourceFile,
+    LoadDate
+FROM dbo.StgStore
+WHERE NULLIF(LTRIM(RTRIM(StoreID)), '') IS NOT NULL
+  AND NOT EXISTS
+  (
+      SELECT 1
+      FROM dbo.DimStore D
+      WHERE D.StoreID = LTRIM(RTRIM(dbo.StgStore.StoreID))
+  );</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DF_Store_Validation\SRC_StgStore.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ICS-LT-G2X1HK3\SQLEXPRESS.RetailDW.sa 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[ICS-LT-G2X1HK3\SQLEXPRESS.RetailDW.sa 1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Output].Columns[StgStoreID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Output].ExternalColumns[StgStoreID]"
+                      lineageId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Output].Columns[StgStoreID]"
+                      name="StgStoreID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Output].Columns[StoreID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Output].ExternalColumns[StoreID]"
+                      length="50"
+                      lineageId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Output].Columns[StoreID]"
+                      name="StoreID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Output].Columns[StoreName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Output].ExternalColumns[StoreName]"
+                      length="200"
+                      lineageId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Output].Columns[StoreName]"
+                      name="StoreName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Output].Columns[City]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Output].ExternalColumns[City]"
+                      length="100"
+                      lineageId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Output].Columns[City]"
+                      name="City"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Output].Columns[State]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Output].ExternalColumns[State]"
+                      length="100"
+                      lineageId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Output].Columns[State]"
+                      name="State"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Output].Columns[SourceFile]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Output].ExternalColumns[SourceFile]"
+                      length="500"
+                      lineageId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Output].Columns[SourceFile]"
+                      name="SourceFile"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Output].Columns[LoadDate]"
+                      dataType="dbTimeStamp2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Output].ExternalColumns[LoadDate]"
+                      lineageId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Output].Columns[LoadDate]"
+                      name="LoadDate"
+                      scale="7"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Output].ExternalColumns[StgStoreID]"
+                      dataType="i4"
+                      name="StgStoreID" />
+                    <externalMetadataColumn
+                      refId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Output].ExternalColumns[StoreID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="StoreID" />
+                    <externalMetadataColumn
+                      refId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Output].ExternalColumns[StoreName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="200"
+                      name="StoreName" />
+                    <externalMetadataColumn
+                      refId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Output].ExternalColumns[City]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="City" />
+                    <externalMetadataColumn
+                      refId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Output].ExternalColumns[State]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="State" />
+                    <externalMetadataColumn
+                      refId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Output].ExternalColumns[SourceFile]"
+                      codePage="1252"
+                      dataType="str"
+                      length="500"
+                      name="SourceFile" />
+                    <externalMetadataColumn
+                      refId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Output].ExternalColumns[LoadDate]"
+                      dataType="dbTimeStamp2"
+                      name="LoadDate"
+                      scale="7" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Error Output].Columns[StgStoreID]"
+                      dataType="i4"
+                      lineageId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Error Output].Columns[StgStoreID]"
+                      name="StgStoreID" />
+                    <outputColumn
+                      refId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Error Output].Columns[StoreID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Error Output].Columns[StoreID]"
+                      name="StoreID" />
+                    <outputColumn
+                      refId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Error Output].Columns[StoreName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="200"
+                      lineageId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Error Output].Columns[StoreName]"
+                      name="StoreName" />
+                    <outputColumn
+                      refId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Error Output].Columns[City]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Error Output].Columns[City]"
+                      name="City" />
+                    <outputColumn
+                      refId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Error Output].Columns[State]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Error Output].Columns[State]"
+                      name="State" />
+                    <outputColumn
+                      refId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Error Output].Columns[SourceFile]"
+                      codePage="1252"
+                      dataType="str"
+                      length="500"
+                      lineageId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Error Output].Columns[SourceFile]"
+                      name="SourceFile" />
+                    <outputColumn
+                      refId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Error Output].Columns[LoadDate]"
+                      dataType="dbTimeStamp2"
+                      lineageId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Error Output].Columns[LoadDate]"
+                      name="LoadDate"
+                      scale="7" />
+                    <outputColumn
+                      refId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DF_Store_Validation.Paths[Data Conversion Output]"
+              endId="Package\DF_Store_Validation\DST_DimStore.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\DF_Store_Validation\DC_Store.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\DF_Store_Validation.Paths[Data Conversion Output1]"
+              endId="Package\DF_Store_Validation\REJ_Store.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\DF_Store_Validation\DC_StoreReject.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\DF_Store_Validation.Paths[Derived Column Output]"
+              endId="Package\DF_Store_Validation\DC_StoreReject.Inputs[Data Conversion Input]"
+              name="Derived Column Output"
+              startId="Package\DF_Store_Validation\DER_Reject_Store.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_Store_Validation.Paths[Invalid_Store]"
+              endId="Package\DF_Store_Validation\DER_Reject_Store.Inputs[Derived Column Input]"
+              name="Invalid_Store"
+              startId="Package\DF_Store_Validation\CS_StoreValidation.Outputs[Invalid_Store]" />
+            <path
+              refId="Package\DF_Store_Validation.Paths[OLE DB Source Output]"
+              endId="Package\DF_Store_Validation\CS_StoreValidation.Inputs[Conditional Split Input]"
+              name="OLE DB Source Output"
+              startId="Package\DF_Store_Validation\SRC_StgStore.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\DF_Store_Validation.Paths[Valid_Store]"
+              endId="Package\DF_Store_Validation\DC_Store.Inputs[Data Conversion Input]"
+              name="Valid_Store"
+              startId="Package\DF_Store_Validation\CS_StoreValidation.Outputs[Valid_Store]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\FST_ArchiveStoreFile"
+      DTS:CreationName="Microsoft.FileSystemTask"
+      DTS:Description="File System Task"
+      DTS:DTSID="{1281121E-185F-441A-8BB6-7CE102E47048}"
+      DTS:ExecutableType="Microsoft.FileSystemTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="FST_ArchiveStoreFile"
+      DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <FileSystemData
+          TaskOperationType="MoveFile"
+          TaskSourcePath="User::CurrentStorePath"
+          TaskIsSourceVariable="True"
+          TaskDestinationPath="User::ArchiveStorePath"
+          TaskIsDestinationVariable="True" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\FST_ErrorStoreFile"
+      DTS:CreationName="Microsoft.FileSystemTask"
+      DTS:DelayValidation="True"
+      DTS:Description="File System Task"
+      DTS:DTSID="{2EC3C4B8-3E4F-4F58-A5C7-54CD9D21849E}"
+      DTS:ExecutableType="Microsoft.FileSystemTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="FST_ErrorStoreFile"
+      DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <FileSystemData
+          TaskOperationType="MoveFile"
+          TaskSourcePath="User::CurrentStorePath"
+          TaskIsSourceVariable="True" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL_Audit_Failed"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{8E03F0F4-3C23-49C7-9C97-B039B1E33B3E}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL_Audit_Failed"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{12AD7B36-9583-4DAC-A73D-54C4BDD19E6B}"
+          SQLTask:SqlStatementSource="UPDATE dbo.AuditLog&#xA;SET&#xA;    EndTime = GETDATE(),&#xA;    Status = 'Failed',&#xA;    ErrorMessage = 'Store ETL package failed.'&#xA;WHERE AuditID = (&#xA;    SELECT MAX(AuditID)&#xA;    FROM dbo.AuditLog&#xA;    WHERE PackageName = 'LoadStores.dtsx'&#xA;);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL_Audit_Start"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{079354c8-8344-4b50-a75f-5dbfcc1c5e01}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL_Audit_Start"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{12AD7B36-9583-4DAC-A73D-54C4BDD19E6B}"
+          SQLTask:SqlStatementSource="INSERT INTO dbo.AuditLog&#xA;(&#xA;    PackageName,&#xA;    SourceFile,&#xA;    StartTime,&#xA;    Status,&#xA;    RecordsRead,&#xA;    RecordsInserted,&#xA;    RecordsRejected&#xA;)&#xA;VALUES&#xA;(&#xA;    'LoadStores.dtsx',&#xA;    'Stores.csv',&#xA;    GETDATE(),&#xA;    'Running',&#xA;    0,&#xA;    0,&#xA;    0&#xA;);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL_Audit_Success"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{df7fdc13-718c-4f4b-95eb-7da2992e1699}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL_Audit_Success"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{12AD7B36-9583-4DAC-A73D-54C4BDD19E6B}"
+          SQLTask:SqlStatementSource="UPDATE dbo.AuditLog&#xA;SET&#xA;    EndTime = GETDATE(),&#xA;    Status = 'Success',&#xA;    RecordsRead = (SELECT COUNT(*) FROM dbo.StgStore),&#xA;    RecordsInserted = (SELECT COUNT(*) FROM dbo.DimStore),&#xA;    RecordsRejected = (&#xA;        SELECT COUNT(*)&#xA;        FROM dbo.RejectedRecords&#xA;        WHERE EntityType = 'Store'&#xA;          AND CONVERT(date, ErrorDate) = CONVERT(date, GETDATE())&#xA;    )&#xA;WHERE AuditID = (&#xA;    SELECT MAX(AuditID)&#xA;    FROM dbo.AuditLog&#xA;    WHERE PackageName = 'LoadStores.dtsx'&#xA;);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL_Clear_StgStore"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{23af4a82-73b5-4a14-a2ac-6ae5c32d1295}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL_Clear_StgStore"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{12AD7B36-9583-4DAC-A73D-54C4BDD19E6B}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE dbo.StgStore;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL_FileImport_Error"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{B7AFF859-98B0-4B77-9AED-B1334C98EB36}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL_FileImport_Error"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{12AD7B36-9583-4DAC-A73D-54C4BDD19E6B}"
+          SQLTask:SqlStatementSource="UPDATE dbo.FileImports&#xA;SET&#xA;    FileImportStatus = 'Error',&#xA;    ArchivePath = 'C:\RetailETL\Error\Stores.csv',&#xA;    UpdatedDate = GETDATE()&#xA;WHERE FileName = 'Stores.csv';" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL_FileImport_Start"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{9489e95b-56e2-4b4d-9f10-fddce01a56b0}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL_FileImport_Start"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{12AD7B36-9583-4DAC-A73D-54C4BDD19E6B}"
+          SQLTask:SqlStatementSource="INSERT INTO dbo.FileImports&#xA;(&#xA;    FileName,&#xA;    ArchivePath,&#xA;    FileImportStatus&#xA;)&#xA;VALUES&#xA;(&#xA;    ?,&#xA;    ?,&#xA;    'Processing'&#xA;);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="0"
+            SQLTask:DtsVariableName="User::CurrentStoreFile"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="1"
+            SQLTask:DtsVariableName="User::CurrentStorePath"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL_FileImport_Success"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{DE2C7C6B-49A0-4FBB-9C8A-10407E54EB09}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL_FileImport_Success"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{12AD7B36-9583-4DAC-A73D-54C4BDD19E6B}"
+          SQLTask:SqlStatementSource="UPDATE dbo.FileImports&#xA;SET&#xA;    FileImportStatus = 'Archived',&#xA;    ArchivePath = 'C:\RetailETL\Archive\Stores.csv',&#xA;    UpdatedDate = GETDATE()&#xA;WHERE FileName = 'Stores.csv';" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{E1A3E64A-CB80-44A6-990F-63DDAF356F35}"
+      DTS:From="Package\DF_Store_Validation"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\FST_ArchiveStoreFile" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{3EFCD1E1-3316-4308-8B97-673F4613B14C}"
+      DTS:From="Package\SQL_Audit_Start"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\SQL_FileImport_Start" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 10]"
+      DTS:CreationName=""
+      DTS:DTSID="{039984B9-024E-4805-BDC4-3217AEE8B217}"
+      DTS:From="Package\DF_Store_Staging"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 10"
+      DTS:To="Package\FST_ErrorStoreFile"
+      DTS:Value="1" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 11]"
+      DTS:CreationName=""
+      DTS:DTSID="{0FF2DAAF-D308-4E29-92FE-EF56D80461BD}"
+      DTS:From="Package\DF_Store_Validation"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 11"
+      DTS:To="Package\FST_ErrorStoreFile"
+      DTS:Value="1" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 12]"
+      DTS:CreationName=""
+      DTS:DTSID="{F00C08ED-8BF1-4FBF-BF1A-9F03C25C5318}"
+      DTS:From="Package\FST_ArchiveStoreFile"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 12"
+      DTS:To="Package\FST_ErrorStoreFile"
+      DTS:Value="1" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 13]"
+      DTS:CreationName=""
+      DTS:DTSID="{A4C9034B-D499-4EFD-BE5E-3B88783AC058}"
+      DTS:From="Package\FST_ErrorStoreFile"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 13"
+      DTS:To="Package\SQL_FileImport_Error" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 14]"
+      DTS:CreationName=""
+      DTS:DTSID="{309C87EE-249C-4AB5-AD22-467053BBBA6A}"
+      DTS:From="Package\SQL_FileImport_Error"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 14"
+      DTS:To="Package\SQL_Audit_Failed" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{1C0A4114-B9DE-4AD9-89DD-987BA2784ED3}"
+      DTS:From="Package\SQL_FileImport_Start"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\SQL_Clear_StgStore" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{EB08B717-64DF-408E-A1FF-72870D234A2B}"
+      DTS:From="Package\SQL_Clear_StgStore"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\DF_Store_Staging" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{ED63025E-41D6-42CF-B51D-3313949896AA}"
+      DTS:From="Package\DF_Store_Staging"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\DF_Store_Validation" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 5]"
+      DTS:CreationName=""
+      DTS:DTSID="{5F213213-C42A-4513-BAF3-7451EC27A928}"
+      DTS:From="Package\FST_ArchiveStoreFile"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 5"
+      DTS:To="Package\SQL_FileImport_Success" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 6]"
+      DTS:CreationName=""
+      DTS:DTSID="{4B123079-B2CA-43E3-A451-98B028CC0FC7}"
+      DTS:From="Package\SQL_FileImport_Success"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 6"
+      DTS:To="Package\SQL_Audit_Success" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 7]"
+      DTS:CreationName=""
+      DTS:DTSID="{3935FDB4-BEDB-4D7C-BAB7-76DB4773FF5D}"
+      DTS:From="Package\SQL_Audit_Start"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 7"
+      DTS:To="Package\FST_ErrorStoreFile"
+      DTS:Value="1" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 8]"
+      DTS:CreationName=""
+      DTS:DTSID="{36700E9B-A4DC-46B6-B5CE-37DEED261D47}"
+      DTS:From="Package\SQL_FileImport_Start"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 8"
+      DTS:To="Package\FST_ErrorStoreFile"
+      DTS:Value="1" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 9]"
+      DTS:CreationName=""
+      DTS:DTSID="{30414026-980A-4954-A1A4-D816F10C2653}"
+      DTS:From="Package\SQL_Clear_StgStore"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 9"
+      DTS:To="Package\FST_ErrorStoreFile"
+      DTS:Value="1" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="168,42.6666666666667"
+          Id="Package\DF_Store_Staging"
+          TopLeft="261.160702610921,296.278192338123" />
+        <NodeLayout
+          Size="178.666666666667,42.6666666666667"
+          Id="Package\DF_Store_Validation"
+          TopLeft="355.119031743989,400.669168635541" />
+        <NodeLayout
+          Size="184,42.6666666666667"
+          Id="Package\FST_ArchiveStoreFile"
+          TopLeft="654.374970747159,546.438590593919" />
+        <NodeLayout
+          Size="172,42.6666666666667"
+          Id="Package\FST_ErrorStoreFile"
+          TopLeft="922.583297514668,105.122805965794" />
+        <NodeLayout
+          Size="166.666666666667,42.6666666666667"
+          Id="Package\SQL_Audit_Failed"
+          TopLeft="1138.9602721874,324.360899191972" />
+        <NodeLayout
+          Size="160,42.6666666666667"
+          Id="Package\SQL_Audit_Start"
+          TopLeft="176.190468314149,35.7192977948641" />
+        <NodeLayout
+          Size="177.333333333334,42.6666666666667"
+          Id="Package\SQL_Audit_Success"
+          TopLeft="88.5416627085458,559.13366268014" />
+        <NodeLayout
+          Size="180,42.6666666666667"
+          Id="Package\SQL_Clear_StgStore"
+          TopLeft="192.827372332326,224.827065303094" />
+        <NodeLayout
+          Size="184,42.6666666666667"
+          Id="Package\SQL_FileImport_Error"
+          TopLeft="1162.32287128565,184.394734817488" />
+        <NodeLayout
+          Size="182.666666666667,42.6666666666667"
+          Id="Package\SQL_FileImport_Start"
+          TopLeft="199.166657763223,137.280700349549" />
+        <NodeLayout
+          Size="200.666666666667,42.6666666666667"
+          Id="Package\SQL_FileImport_Success"
+          TopLeft="356.666651914518,607.614029543497" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="444.452365077322,443.335835302207">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="272.589272336503,103.102755291711"
+              Start="0,0"
+              End="272.589272336503,95.6027552917112">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,57.3283630614489" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,57.3283630614489"
+                    Point2="0,61.3283630614489"
+                    Point3="4,61.3283630614489" />
+                  <mssgle:LineSegment
+                    End="268.589272336503,61.3283630614489" />
+                  <mssgle:CubicBezierSegment
+                    Point1="268.589272336503,61.3283630614489"
+                    Point2="272.589272336503,61.3283630614489"
+                    Point3="272.589272336503,65.3283630614489" />
+                  <mssgle:LineSegment
+                    End="272.589272336503,95.6027552917112" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="256.190468314149,78.3859644615308">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="34.3095227824078,58.8947358880184"
+              Start="0,0"
+              End="34.3095227824078,51.3947358880184">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.4473679440092" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.4473679440092"
+                    Point2="0,29.4473679440092"
+                    Point3="4,29.4473679440092" />
+                  <mssgle:LineSegment
+                    End="30.3095227824078,29.4473679440092" />
+                  <mssgle:CubicBezierSegment
+                    Point1="30.3095227824078,29.4473679440092"
+                    Point2="34.3095227824078,29.4473679440092"
+                    Point3="34.3095227824078,33.4473679440092" />
+                  <mssgle:LineSegment
+                    End="34.3095227824078,51.3947358880184" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 10]"
+          TopLeft="371.827369277588,296.278192338123">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="609.422594903747,-148.488719705663"
+              Start="0,0"
+              End="609.422594903747,-140.988719705663">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-70.2644421790019" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-70.2644421790019"
+                    Point2="0,-74.2644421790019"
+                    Point3="4,-74.2644421790019" />
+                  <mssgle:LineSegment
+                    End="605.422594903747,-74.2644421790019" />
+                  <mssgle:CubicBezierSegment
+                    Point1="605.422594903747,-74.2644421790019"
+                    Point2="609.422594903747,-74.2644421790019"
+                    Point3="609.422594903747,-78.2644421790019" />
+                  <mssgle:LineSegment
+                    End="609.422594903747,-140.988719705663" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="289.469949795623,-69.2644421790019,30.4826953125,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 11]"
+          TopLeft="472.896809521767,400.669168635541">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="535.686487992901,-252.87969600308"
+              Start="0,0"
+              End="535.686487992901,-245.37969600308">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-98.4985750071655" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-98.4985750071655"
+                    Point2="0,-102.498575007165"
+                    Point3="4,-102.498575007165" />
+                  <mssgle:LineSegment
+                    End="531.686487992901,-102.498575007165" />
+                  <mssgle:CubicBezierSegment
+                    Point1="531.686487992901,-102.498575007165"
+                    Point2="535.686487992901,-102.498575007165"
+                    Point3="535.686487992901,-106.498575007165" />
+                  <mssgle:LineSegment
+                    End="535.686487992901,-245.37969600308" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="252.6018963402,-97.4985750071655,30.4826953125,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 12]"
+          TopLeft="775.708304080492,546.438590593919">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="260.208326767509,-398.649117961458"
+              Start="0,0"
+              End="260.208326767509,-391.149117961458">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-195.176728652684" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-195.176728652684"
+                    Point2="0,-199.176728652684"
+                    Point3="4,-199.176728652684" />
+                  <mssgle:LineSegment
+                    End="256.208326767509,-199.176728652684" />
+                  <mssgle:CubicBezierSegment
+                    Point1="256.208326767509,-199.176728652684"
+                    Point2="260.208326767509,-199.176728652684"
+                    Point3="260.208326767509,-203.176728652684" />
+                  <mssgle:LineSegment
+                    End="260.208326767509,-391.149117961458" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="114.862815727505,-194.176728652684,30.4826953125,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 13]"
+          TopLeft="1063.24996418133,147.789472632461">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="191.072907104312,36.6052621850267"
+              Start="0,0"
+              End="191.072907104312,29.1052621850267">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,5.775268878956" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,5.775268878956"
+                    Point2="0,9.775268878956"
+                    Point3="4,9.775268878956" />
+                  <mssgle:LineSegment
+                    End="187.072907104312,9.775268878956" />
+                  <mssgle:CubicBezierSegment
+                    Point1="187.072907104312,9.775268878956"
+                    Point2="191.072907104312,9.775268878956"
+                    Point3="191.072907104312,13.775268878956" />
+                  <mssgle:LineSegment
+                    End="191.072907104312,29.1052621850267" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 14]"
+          TopLeft="1254.32287128565,227.061401484154">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-32.0292657649156,97.2994977078177"
+              Start="0,0"
+              End="-32.0292657649156,89.7994977078177">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.6497488539088" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,44.6497488539088"
+                    Point2="0,48.6497488539088"
+                    Point3="-4,48.6497488539088" />
+                  <mssgle:LineSegment
+                    End="-28.0292657649156,48.6497488539088" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-28.0292657649156,48.6497488539088"
+                    Point2="-32.0292657649156,48.6497488539088"
+                    Point3="-32.0292657649156,52.6497488539088" />
+                  <mssgle:LineSegment
+                    End="-32.0292657649156,89.7994977078177" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="290.499991096557,179.947367016216">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-36.3392854308973,44.8796982868778"
+              Start="0,0"
+              End="-36.3392854308973,37.3796982868778">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.6905694657643" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.6905694657643"
+                    Point2="0,26.6905694657643"
+                    Point3="-4,26.6905694657643" />
+                  <mssgle:LineSegment
+                    End="-32.3392854308973,26.6905694657643" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-32.3392854308973,26.6905694657643"
+                    Point2="-36.3392854308973,26.6905694657643"
+                    Point3="-36.3392854308973,30.6905694657643" />
+                  <mssgle:LineSegment
+                    End="-36.3392854308973,37.3796982868778" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="282.827372332326,267.49373196976">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="35.6666636119284,28.7844603683632"
+              Start="0,0"
+              End="35.6666636119284,21.2844603683632">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.1077453132725" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.1077453132725"
+                    Point2="0,17.1077453132725"
+                    Point3="4,17.1077453132725" />
+                  <mssgle:LineSegment
+                    End="31.6666636119284,17.1077453132725" />
+                  <mssgle:CubicBezierSegment
+                    Point1="31.6666636119284,17.1077453132725"
+                    Point2="35.6666636119284,17.1077453132725"
+                    Point3="35.6666636119284,21.1077453132725" />
+                  <mssgle:LineSegment
+                    End="35.6666636119284,21.2844603683632" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="345.160702610921,338.94485900479">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="70.847218021957,61.7243096307506"
+              Start="0,0"
+              End="70.847218021957,54.2243096307506">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.7058764372215" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,32.7058764372215"
+                    Point2="0,36.7058764372215"
+                    Point3="4,36.7058764372215" />
+                  <mssgle:LineSegment
+                    End="66.847218021957,36.7058764372215" />
+                  <mssgle:CubicBezierSegment
+                    Point1="66.847218021957,36.7058764372215"
+                    Point2="70.847218021957,36.7058764372215"
+                    Point3="70.847218021957,40.7058764372215" />
+                  <mssgle:LineSegment
+                    End="70.847218021957,54.2243096307506" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 5]"
+          TopLeft="654.374970747159,567.771923927252">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-97.0416521659744,61.1754389495785"
+              Start="0,0"
+              End="-89.5416521659744,61.1754389495785">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-44.5208260829872,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-44.5208260829872,0"
+                    Point2="-48.5208260829872,0"
+                    Point3="-48.5208260829872,4" />
+                  <mssgle:LineSegment
+                    End="-48.5208260829872,57.1754389495785" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-48.5208260829872,57.1754389495785"
+                    Point2="-48.5208260829872,61.1754389495785"
+                    Point3="-52.5208260829872,61.1754389495785" />
+                  <mssgle:LineSegment
+                    End="-89.5416521659744,61.1754389495785" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 6]"
+          TopLeft="356.666651914518,628.94736287683">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-90.7916558726386,-48.4803668633575"
+              Start="0,0"
+              End="-83.2916558726386,-48.4803668633575">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-41.3958279363193,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-41.3958279363193,0"
+                    Point2="-45.3958279363193,0"
+                    Point3="-45.3958279363193,-4" />
+                  <mssgle:LineSegment
+                    End="-45.3958279363193,-44.4803668633575" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-45.3958279363193,-44.4803668633575"
+                    Point2="-45.3958279363193,-48.4803668633575"
+                    Point3="-49.3958279363193,-48.4803668633575" />
+                  <mssgle:LineSegment
+                    End="-83.2916558726386,-48.4803668633575" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 7]"
+          TopLeft="281.523801647482,78.3859644615308">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="727.059495867186,26.7368415042634"
+              Start="0,0"
+              End="727.059495867186,19.2368415042634">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,6.85356932351288" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,6.85356932351288"
+                    Point2="0,10.8535693235129"
+                    Point3="4,10.8535693235129" />
+                  <mssgle:LineSegment
+                    End="723.059495867186,10.8535693235129" />
+                  <mssgle:CubicBezierSegment
+                    Point1="723.059495867186,10.8535693235129"
+                    Point2="727.059495867186,10.8535693235129"
+                    Point3="727.059495867186,14.8535693235129" />
+                  <mssgle:LineSegment
+                    End="727.059495867186,19.2368415042634" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="348.288400277343,15.8535693235129,30.4826953125,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 8]"
+          TopLeft="381.83332442989,158.614033682883">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="540.749973084778,-32.157894383755"
+              Start="0,0"
+              End="533.249973084778,-32.157894383755">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="266.374986542389,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="266.374986542389,0"
+                    Point2="270.374986542389,0"
+                    Point3="270.374986542389,-4" />
+                  <mssgle:LineSegment
+                    End="270.374986542389,-28.157894383755" />
+                  <mssgle:CubicBezierSegment
+                    Point1="270.374986542389,-28.157894383755"
+                    Point2="270.374986542389,-32.157894383755"
+                    Point3="274.374986542389,-32.157894383755" />
+                  <mssgle:LineSegment
+                    End="533.249973084778,-32.157894383755" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="255.133638886139,1,30.4826953125,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 9]"
+          TopLeft="311.494038998993,224.827065303094">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="642.422591849009,-77.0375926706327"
+              Start="0,0"
+              End="642.422591849009,-69.5375926706327">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-46.1994262238548" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-46.1994262238548"
+                    Point2="0,-50.1994262238548"
+                    Point3="4,-50.1994262238548" />
+                  <mssgle:LineSegment
+                    End="638.422591849009,-50.1994262238548" />
+                  <mssgle:CubicBezierSegment
+                    Point1="638.422591849009,-50.1994262238548"
+                    Point2="642.422591849009,-50.1994262238548"
+                    Point3="642.422591849009,-54.1994262238548" />
+                  <mssgle:LineSegment
+                    End="642.422591849009,-69.5375926706327" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="305.969948268254,-45.1994262238548,30.4826953125,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\DF_Store_Staging">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="174.666666666667,42.6666666666667"
+          Id="Package\DF_Store_Staging\DER_SetSourceFile"
+          TopLeft="22.4999989941716,103.999998858101" />
+        <NodeLayout
+          Size="177.333333333334,42.6666666666667"
+          Id="Package\DF_Store_Staging\DC_StoreSourceFile"
+          TopLeft="13.1249994132668,183.368419039283" />
+        <NodeLayout
+          Size="139.333333333334,42.6666666666667"
+          Id="Package\DF_Store_Staging\SRC_Stores"
+          TopLeft="67.499996982515,21.2105260829021" />
+        <NodeLayout
+          Size="148,42.6666666666667"
+          Id="Package\DF_Store_Staging\DST_StgStore"
+          TopLeft="10.6249995250255,251.789470919612" />
+        <EdgeLayout
+          Id="Package\DF_Store_Staging.Paths[Derived Column Output]"
+          TopLeft="109.833332327505,146.666665524767">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-8.04166624757148,36.7017535145153"
+              Start="0,0"
+              End="-8.04166624757148,29.2017535145153">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.3508767572577" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.3508767572577"
+                    Point2="0,18.3508767572577"
+                    Point3="-4,18.3508767572577" />
+                  <mssgle:LineSegment
+                    End="-4.04166624757148,18.3508767572577" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-4.04166624757148,18.3508767572577"
+                    Point2="-8.04166624757148,18.3508767572577"
+                    Point3="-8.04166624757148,22.3508767572577" />
+                  <mssgle:LineSegment
+                    End="-8.04166624757148,29.2017535145153" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_Store_Staging.Paths[Data Conversion Output]"
+          TopLeft="101.791666079933,226.035085705949">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-17.166666554908,25.7543852136627"
+              Start="0,0"
+              End="-17.166666554908,18.2543852136627">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,8.87719260683134" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,8.87719260683134"
+                    Point2="0,12.8771926068313"
+                    Point3="-4,12.8771926068313" />
+                  <mssgle:LineSegment
+                    End="-13.166666554908,12.8771926068313" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-13.166666554908,12.8771926068313"
+                    Point2="-17.166666554908,12.8771926068313"
+                    Point3="-17.166666554908,16.8771926068313" />
+                  <mssgle:LineSegment
+                    End="-17.166666554908,18.2543852136627" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_Store_Staging.Paths[Flat File Source Output]"
+          TopLeft="137.166663649182,63.8771927495687">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-27.3333313216767,40.1228061085318"
+              Start="0,0"
+              End="-27.3333313216767,32.6228061085318">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.0614030542659" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.0614030542659"
+                    Point2="0,20.0614030542659"
+                    Point3="-4,20.0614030542659" />
+                  <mssgle:LineSegment
+                    End="-23.3333313216767,20.0614030542659" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-23.3333313216767,20.0614030542659"
+                    Point2="-27.3333313216767,20.0614030542659"
+                    Point3="-27.3333313216767,24.0614030542659" />
+                  <mssgle:LineSegment
+                    End="-27.3333313216767,32.6228061085318" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DF_Store_Staging\DST_StgStore">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\DF_Store_Validation">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="131.333333333334,42.6666666666667"
+          Id="Package\DF_Store_Validation\REJ_Store"
+          TopLeft="261.999993681908,352.99998947978" />
+        <NodeLayout
+          Size="126.666666666667,42.6666666666667"
+          Id="Package\DF_Store_Validation\DC_Store"
+          TopLeft="32.9999990165234,192.999994248152" />
+        <NodeLayout
+          Size="173.333333333334,42.6666666666667"
+          Id="Package\DF_Store_Validation\CS_StoreValidation"
+          TopLeft="49.9999985098839,106.999996811152" />
+        <NodeLayout
+          Size="149.333333333334,42.6666666666667"
+          Id="Package\DF_Store_Validation\SRC_StgStore"
+          TopLeft="64.9999980628491,9.99999970197678" />
+        <NodeLayout
+          Size="169.333333333334,42.6666666666667"
+          Id="Package\DF_Store_Validation\DER_Reject_Store"
+          TopLeft="290.666658441226,205.999993860722" />
+        <NodeLayout
+          Size="152,42.6666666666667"
+          Id="Package\DF_Store_Validation\DST_DimStore"
+          TopLeft="18.9999994337559,283.999991536141" />
+        <NodeLayout
+          Size="157.333333333334,42.6666666666667"
+          Id="Package\DF_Store_Validation\DC_StoreReject"
+          TopLeft="289.999991357327,283.999991536141" />
+        <EdgeLayout
+          Id="Package\DF_Store_Validation.Paths[Valid_Store]"
+          TopLeft="136.666665176551,149.666663477818">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-40.3333328266939,43.3333307703336"
+              Start="0,0"
+              End="-40.3333328266939,35.8333307703336">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.6666653851668" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.6666653851668"
+                    Point2="0,21.6666653851668"
+                    Point3="-4,21.6666653851668" />
+                  <mssgle:LineSegment
+                    End="-36.3333328266939,21.6666653851668" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-36.3333328266939,21.6666653851668"
+                    Point2="-40.3333328266939,21.6666653851668"
+                    Point3="-40.3333328266939,25.6666653851668" />
+                  <mssgle:LineSegment
+                    End="-40.3333328266939,35.8333307703336" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-46.051197663347,26.6666653851668,51.7690625,11.0625"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_Store_Validation.Paths[OLE DB Source Output]"
+          TopLeft="138.166664953033,52.6666663686434">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,54.3333304425082"
+              Start="0,0"
+              End="0,46.8333304425082">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,46.8333304425082" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_Store_Validation.Paths[Invalid_Store]"
+          TopLeft="164.222220732106,149.666663477818">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="211.111104375787,56.3333303829035"
+              Start="0,0"
+              End="211.111104375787,48.8333303829035">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.8424784784334" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.8424784784334"
+                    Point2="0,22.8424784784334"
+                    Point3="4,22.8424784784334" />
+                  <mssgle:LineSegment
+                    End="207.111104375787,22.8424784784334" />
+                  <mssgle:CubicBezierSegment
+                    Point1="207.111104375787,22.8424784784334"
+                    Point2="211.111104375787,22.8424784784334"
+                    Point3="211.111104375787,26.8424784784334" />
+                  <mssgle:LineSegment
+                    End="211.111104375787,48.8333303829035" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="75.7576029691435,27.8424784784334,59.5958984375,11.0625"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_Store_Validation.Paths[Derived Column Output]"
+          TopLeft="371.999991565943,248.666660527388">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35.3333310087523"
+              Start="0,0"
+              End="0,27.8333310087523">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.8333310087523" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_Store_Validation.Paths[Data Conversion Output1]"
+          TopLeft="368.666658023993,326.666658202807">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-40.9999976754189,26.3333312769731"
+              Start="0,0"
+              End="-40.9999976754189,18.8333312769731">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,9.16666563848656" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,9.16666563848656"
+                    Point2="0,13.1666656384866"
+                    Point3="-4,13.1666656384866" />
+                  <mssgle:LineSegment
+                    End="-36.9999976754189,13.1666656384866" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-36.9999976754189,13.1666656384866"
+                    Point2="-40.9999976754189,13.1666656384866"
+                    Point3="-40.9999976754189,17.1666656384866" />
+                  <mssgle:LineSegment
+                    End="-40.9999976754189,18.8333312769731" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_Store_Validation.Paths[Data Conversion Output]"
+          TopLeft="95.6666658918063,235.666660914819">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,48.3333306213221"
+              Start="0,0"
+              End="0,40.8333306213221">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.8333306213221" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DF_Store_Validation\REJ_Store">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DF_Store_Validation\SRC_StgStore">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DF_Store_Validation\DST_DimStore">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

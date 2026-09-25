@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="ICS-LT-G2X1HK3_SQLEXPRESS.RetailDW.sa1"
+  DTS:DTSID="{12AD7B36-9583-4DAC-A73D-54C4BDD19E6B}"
+  DTS:CreationName="OLEDB">
+  <DTS:PropertyExpression
+    DTS:Name="ConnectionString">@[$Project::p_DatabaseConnection]</DTS:PropertyExpression>
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=ICS-LT-G2X1HK3\SQLEXPRESS;User ID=sa;Initial Catalog=RetailDW;Provider=MSOLEDBSQL19.1;Persist Security Info=True;Application Name=SSIS-{12AD7B36-9583-4DAC-A73D-54C4BDD19E6B}ICS-LT-G2X1HK3_SQLEXPRESS.RetailDW.sa1;Trust Server Certificate=True;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

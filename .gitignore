@@ -1,0 +1,64 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build output
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+
+# Visual Studio / MSBuild temporary files
+*.cache
+*.log
+*.tmp
+*.tlog
+
+# SSIS deployment output
+*.ispac
+
+# SSIS user-specific files
+*.dtsx.user
+*.conmgr.user
+
+# SQL Server local database files
+*.mdf
+*.ldf
+*.ndf
+*.bak
+
+# Secrets / environment files
+.env
+.env.*
+*.secrets
+secrets.json
+
+# OS files
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Temporary files
+*.temp
+*.swp
+*~
+
+# Generated/deployment folders
+publish/
+deployment/
+artifacts/
+packages/
+
+# Local ETL input/output data
+*.csv
+*.xlsx
+*.xls
+
+# Local logs
+logs/
+*.etl
