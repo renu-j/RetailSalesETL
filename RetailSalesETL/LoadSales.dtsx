@@ -12,8 +12,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="114"
-  DTS:VersionGUID="{79DF666E-5D9B-4DC8-A815-813B9FFE550F}">
+  DTS:VersionBuild="116"
+  DTS:VersionGUID="{3F28EF30-02ED-4478-B913-1C2C4B383E01}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -6149,7 +6149,7 @@ FROM dbo.StgSales S;</property>
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_Audit_Failed"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -6183,7 +6183,7 @@ FROM dbo.StgSales S;</property>
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_Audit_Success"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -6200,7 +6200,7 @@ FROM dbo.StgSales S;</property>
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_FileImport_Error"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -6794,101 +6794,113 @@ FROM dbo.StgSales S;</property>
         <NodeLayout
           Size="225.333333333334,42.6666666666667"
           Id="Package\FLC_SalesFiles\DF_Sales_Validation\DER_Reject_UnknownProduct"
-          TopLeft="691.99998497963,194.999994188547" />
+          TopLeft="261.166666666667,422.916666666666" />
         <NodeLayout
           Size="194,42.6666666666667"
           Id="Package\FLC_SalesFiles\DF_Sales_Validation\UNION_SalesRejects"
-          TopLeft="96.8749956693502,175.842103332446" />
+          TopLeft="787.833333333333,214.208333333333" />
         <NodeLayout
           Size="176,42.6666666666667"
           Id="Package\FLC_SalesFiles\DF_Sales_Validation\REJ_UnknownStore"
-          TopLeft="1260.66664461295,278.999991685152" />
+          TopLeft="524.833333333333,735.979166666666" />
         <NodeLayout
           Size="201.333333333334,42.6666666666667"
           Id="Package\FLC_SalesFiles\DF_Sales_Validation\DER_SalesRejectReason"
-          TopLeft="98.7499955855311,255.210523513628" />
+          TopLeft="784.166666666667,318.562499999999" />
         <NodeLayout
           Size="131.333333333334,42"
           Id="Package\FLC_SalesFiles\DF_Sales_Validation\LKP_Store"
-          TopLeft="413.999987661839,218.999994128942" />
+          TopLeft="547.166666666667,423.25" />
         <NodeLayout
           Size="192,42.6666666666667"
           Id="Package\FLC_SalesFiles\DF_Sales_Validation\DC_UnknownCustomer"
-          TopLeft="1046.33330278595,78.9999976456165" />
+          TopLeft="8.83333333333337,422.916666666666" />
         <NodeLayout
           Size="170.666666666667,42.6666666666667"
           Id="Package\FLC_SalesFiles\DF_Sales_Validation\DC_UnknownStore"
-          TopLeft="1043.33330496152,280.999991625548" />
+          TopLeft="527.5,631.625" />
         <NodeLayout
           Size="142.666666666667,42.6666666666667"
           Id="Package\FLC_SalesFiles\DF_Sales_Validation\LKP_Product"
-          TopLeft="424.999987334013,132.333330025276" />
+          TopLeft="541.5,318.562499999999" />
         <NodeLayout
           Size="150.666666666667,42.6666666666667"
           Id="Package\FLC_SalesFiles\DF_Sales_Validation\SRC_StgSales"
-          TopLeft="173.499993003905,14.8421044602289" />
+          TopLeft="809.5,5.4999999999997" />
         <NodeLayout
           Size="132,42.6666666666667"
           Id="Package\FLC_SalesFiles\DF_Sales_Validation\REJ_Sales"
-          TopLeft="122.999994859099,400.087717547834" />
+          TopLeft="1054.83333333333,527.270833333333" />
         <NodeLayout
           Size="158.666666666667,42.6666666666667"
           Id="Package\FLC_SalesFiles\DF_Sales_Validation\DC_SalesReject"
-          TopLeft="112.708330232029,324.999996431564" />
+          TopLeft="1041.5,422.916666666666" />
         <NodeLayout
           Size="234.666666666667,42.6666666666667"
           Id="Package\FLC_SalesFiles\DF_Sales_Validation\DER_Reject_UnknownCustomer"
-          TopLeft="702.999979048968,81.9999975562096" />
+          TopLeft="246.5,318.562499999999" />
         <NodeLayout
           Size="166.666666666667,42.6666666666667"
           Id="Package\FLC_SalesFiles\DF_Sales_Validation\RC_SalesInserted"
-          TopLeft="388.999988406897,404.333321919044" />
+          TopLeft="804.5,631.625" />
         <NodeLayout
           Size="154.666666666667,42.6666666666667"
           Id="Package\FLC_SalesFiles\DF_Sales_Validation\DST_FactSales"
-          TopLeft="399.999988079071,491.999987244606" />
+          TopLeft="810.5,735.979166666666" />
         <NodeLayout
           Size="152,42.6666666666667"
           Id="Package\FLC_SalesFiles\DF_Sales_Validation\LKP_Customer"
-          TopLeft="425.708315435176,56.6315796807861" />
+          TopLeft="536.833333333333,214.208333333333" />
         <NodeLayout
           Size="196.666666666667,42.6666666666667"
           Id="Package\FLC_SalesFiles\DF_Sales_Validation\REJ_UnknownCustomer"
-          TopLeft="1349.33329375585,77.999997675419" />
+          TopLeft="5.50000000000004,527.270833333333" />
         <NodeLayout
           Size="214.666666666667,42.6666666666667"
           Id="Package\FLC_SalesFiles\DF_Sales_Validation\DER_Reject_UnknownStore"
-          TopLeft="681.666664729516,269.999991953373" />
+          TopLeft="505.5,527.270833333333" />
         <NodeLayout
           Size="182.666666666667,42.6666666666667"
           Id="Package\FLC_SalesFiles\DF_Sales_Validation\DC_UnknownProduct"
-          TopLeft="1031.66665483514,200.999994009733" />
+          TopLeft="262.5,527.270833333333" />
         <NodeLayout
           Size="213.333333333334,42.6666666666667"
           Id="Package\FLC_SalesFiles\DF_Sales_Validation\DER_CalculateTotalAmount"
-          TopLeft="383.999988555908,329.333324154218" />
+          TopLeft="781.166666666667,527.270833333333" />
         <NodeLayout
           Size="174.666666666667,42.6666666666667"
           Id="Package\FLC_SalesFiles\DF_Sales_Validation\CS_SalesValidation"
-          TopLeft="152.874993925914,82.1052598094675" />
+          TopLeft="797.5,109.854166666666" />
         <NodeLayout
           Size="186.666666666667,42.6666666666667"
           Id="Package\FLC_SalesFiles\DF_Sales_Validation\REJ_UnknownProduct"
-          TopLeft="1327.66664547722,202.999993950129" />
+          TopLeft="260.5,631.625" />
         <EdgeLayout
           Id="Package\FLC_SalesFiles\DF_Sales_Validation.Paths[Derived Column Output]"
-          TopLeft="195.72916290878,297.877190180295">
+          TopLeft="884.833333333333,361.229166666666">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,27.1228062512693"
+              EndConnector="236,61.6875000000001"
               Start="0,0"
-              End="0,19.6228062512693">
+              End="236,54.1875000000001">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,19.6228062512693" />
+                    End="0,26.84375" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26.84375"
+                    Point2="0,30.84375"
+                    Point3="4,30.84375" />
+                  <mssgle:LineSegment
+                    End="232,30.84375" />
+                  <mssgle:CubicBezierSegment
+                    Point1="232,30.84375"
+                    Point2="236,30.84375"
+                    Point3="236,34.84375" />
+                  <mssgle:LineSegment
+                    End="236,54.1875000000001" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6899,18 +6911,18 @@ FROM dbo.StgSales S;</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\FLC_SalesFiles\DF_Sales_Validation.Paths[Data Conversion Output3]"
-          TopLeft="1213.99997162819,301.333324988683">
+          TopLeft="612.833333333333,674.291666666666">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="46.6666729847586,0"
+              EndConnector="0,61.6875000000001"
               Start="0,0"
-              End="39.1666729847586,0">
+              End="0,54.1875000000001">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="39.1666729847586,0" />
+                    End="0,54.1875000000001" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6921,18 +6933,18 @@ FROM dbo.StgSales S;</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\FLC_SalesFiles\DF_Sales_Validation.Paths[Data Conversion Output2]"
-          TopLeft="1238.33330278595,99.8333309938511">
+          TopLeft="104.333333333333,465.583333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="110.999990969896,0"
+              EndConnector="0,61.6875"
               Start="0,0"
-              End="103.499990969896,0">
+              End="0,54.1875">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="103.499990969896,0" />
+                    End="0,54.1875" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6943,18 +6955,18 @@ FROM dbo.StgSales S;</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\FLC_SalesFiles\DF_Sales_Validation.Paths[Data Conversion Output1]"
-          TopLeft="1214.33332150181,223.333327313264">
+          TopLeft="353.833333333333,569.9375">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="113.333323975404,0"
+              EndConnector="0,61.6875000000001"
               Start="0,0"
-              End="105.833323975404,0">
+              End="0,54.1875000000001">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="105.833323975404,0" />
+                    End="0,54.1875000000001" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6965,18 +6977,18 @@ FROM dbo.StgSales S;</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\FLC_SalesFiles\DF_Sales_Validation.Paths[Data Conversion Output]"
-          TopLeft="190.520829212231,367.666663098231">
+          TopLeft="1120.83333333333,465.583333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,32.4210544496029"
+              EndConnector="0,61.6875"
               Start="0,0"
-              End="0,24.9210544496029">
+              End="0,54.1875">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,24.9210544496029" />
+                    End="0,54.1875" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6987,54 +6999,54 @@ FROM dbo.StgSales S;</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\FLC_SalesFiles\DF_Sales_Validation.Paths[Valid_Sale]"
-          TopLeft="327.541660592581,103.438593142801">
+          TopLeft="857.055555555556,152.520833333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="98.1666548425956,-25.4736801286814"
+              EndConnector="-244.222222222222,61.6874999999998"
               Start="0,0"
-              End="90.6666548425956,-25.4736801286814">
+              End="-244.222222222222,54.1874999999998">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="45.0833274212978,0" />
+                    End="0,21.0109682299545" />
                   <mssgle:CubicBezierSegment
-                    Point1="45.0833274212978,0"
-                    Point2="49.0833274212978,0"
-                    Point3="49.0833274212978,-4" />
+                    Point1="0,21.0109682299545"
+                    Point2="0,25.0109682299545"
+                    Point3="-4,25.0109682299545" />
                   <mssgle:LineSegment
-                    End="49.0833274212978,-21.4736801286814" />
+                    End="-240.222222222222,25.0109682299545" />
                   <mssgle:CubicBezierSegment
-                    Point1="49.0833274212978,-21.4736801286814"
-                    Point2="49.0833274212978,-25.4736801286814"
-                    Point3="53.0833274212978,-25.4736801286814" />
+                    Point1="-240.222222222222,25.0109682299545"
+                    Point2="-244.222222222222,25.0109682299545"
+                    Point3="-244.222222222222,29.0109682299545" />
                   <mssgle:LineSegment
-                    End="90.6666548425956,-25.4736801286814" />
+                    End="-244.222222222222,54.1874999999998" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="25.6137961712978,1,46.9390625,11.0625"
+              BoundingBox="-145.580642361111,30.0109682299545,46.9390625,11.0625"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\FLC_SalesFiles\DF_Sales_Validation.Paths[Union All Output 1]"
-          TopLeft="196.645828960774,218.508769999113">
+          TopLeft="884.833333333333,256.874999999999">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,36.7017535145155"
+              EndConnector="0,61.6875"
               Start="0,0"
-              End="0,29.2017535145155">
+              End="0,54.1875">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,29.2017535145155" />
+                    End="0,54.1875" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7045,18 +7057,18 @@ FROM dbo.StgSales S;</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\FLC_SalesFiles\DF_Sales_Validation.Paths[Row Count Output 1]"
-          TopLeft="474.833321576318,446.999988585711">
+          TopLeft="887.833333333333,674.291666666666">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,44.9999986588955"
+              EndConnector="0,61.6875000000001"
               Start="0,0"
-              End="0,37.4999986588955">
+              End="0,54.1875000000001">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,37.4999986588955" />
+                    End="0,54.1875000000001" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7067,30 +7079,18 @@ FROM dbo.StgSales S;</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\FLC_SalesFiles\DF_Sales_Validation.Paths[OLE DB Source Output]"
-          TopLeft="248.833326337238,57.5087711268956">
+          TopLeft="884.833333333333,48.1666666666664">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-8.62499907799065,24.5964886825719"
+              EndConnector="0,61.6874999999999"
               Start="0,0"
-              End="-8.62499907799065,17.0964886825719">
+              End="0,54.1874999999999">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,8.29824434128596" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,8.29824434128596"
-                    Point2="0,12.298244341286"
-                    Point3="-4,12.298244341286" />
-                  <mssgle:LineSegment
-                    End="-4.62499907799065,12.298244341286" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-4.62499907799065,12.298244341286"
-                    Point2="-8.62499907799065,12.298244341286"
-                    Point3="-8.62499907799065,16.298244341286" />
-                  <mssgle:LineSegment
-                    End="-8.62499907799065,17.0964886825719" />
+                    End="0,54.1874999999999" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7101,486 +7101,486 @@ FROM dbo.StgSales S;</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\FLC_SalesFiles\DF_Sales_Validation.Paths[Missing_StoreID]"
-          TopLeft="240.208327259248,124.771926476134">
+          TopLeft="912.611111111111,152.520833333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-46.3333315898975,51.0701768563119"
+              EndConnector="-27.7777777777777,61.6874999999998"
               Start="0,0"
-              End="-46.3333315898975,43.5701768563119">
+              End="-27.7777777777777,54.1874999999998">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,21.535088428156" />
+                    End="0,21.0109682299546" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,21.535088428156"
-                    Point2="0,25.535088428156"
-                    Point3="-4,25.535088428156" />
+                    Point1="0,21.0109682299546"
+                    Point2="0,25.0109682299546"
+                    Point3="-4,25.0109682299546" />
                   <mssgle:LineSegment
-                    End="-42.3333315898975,25.535088428156" />
+                    End="-23.7777777777777,25.0109682299546" />
                   <mssgle:CubicBezierSegment
-                    Point1="-42.3333315898975,25.535088428156"
-                    Point2="-46.3333315898975,25.535088428156"
-                    Point3="-46.3333315898975,29.535088428156" />
+                    Point1="-23.7777777777777,25.0109682299546"
+                    Point2="-27.7777777777777,25.0109682299546"
+                    Point3="-27.7777777777777,29.0109682299546" />
                   <mssgle:LineSegment
-                    End="-46.3333315898975,43.5701768563119" />
+                    End="-27.7777777777777,54.1874999999998" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-59.3878767324488,30.535088428156,72.442421875,11.4677734375"
+              BoundingBox="-50.1100998263889,30.0109682299546,72.442421875,11.4677734375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\FLC_SalesFiles\DF_Sales_Validation.Paths[Missing_ProductID]"
-          TopLeft="240.208327259248,124.771926476134">
+          TopLeft="912.611111111111,152.520833333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-46.3333315898975,51.0701768563119"
+              EndConnector="-27.7777777777777,61.6874999999998"
               Start="0,0"
-              End="-46.3333315898975,43.5701768563119">
+              End="-27.7777777777777,54.1874999999998">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,21.535088428156" />
+                    End="0,21.0109682299546" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,21.535088428156"
-                    Point2="0,25.535088428156"
-                    Point3="-4,25.535088428156" />
+                    Point1="0,21.0109682299546"
+                    Point2="0,25.0109682299546"
+                    Point3="-4,25.0109682299546" />
                   <mssgle:LineSegment
-                    End="-42.3333315898975,25.535088428156" />
+                    End="-23.7777777777777,25.0109682299546" />
                   <mssgle:CubicBezierSegment
-                    Point1="-42.3333315898975,25.535088428156"
-                    Point2="-46.3333315898975,25.535088428156"
-                    Point3="-46.3333315898975,29.535088428156" />
+                    Point1="-23.7777777777777,25.0109682299546"
+                    Point2="-27.7777777777777,25.0109682299546"
+                    Point3="-27.7777777777777,29.0109682299546" />
                   <mssgle:LineSegment
-                    End="-46.3333315898975,43.5701768563119" />
+                    End="-27.7777777777777,54.1874999999998" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-64.5878767324488,30.535088428156,82.842421875,11.6630859375"
+              BoundingBox="-55.3100998263889,30.0109682299546,82.842421875,11.6630859375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\FLC_SalesFiles\DF_Sales_Validation.Paths[Missing_CustomerID]"
-          TopLeft="240.208327259248,124.771926476134">
+          TopLeft="912.611111111111,152.520833333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-46.3333315898975,51.0701768563119"
+              EndConnector="-27.7777777777777,61.6874999999998"
               Start="0,0"
-              End="-46.3333315898975,43.5701768563119">
+              End="-27.7777777777777,54.1874999999998">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,21.535088428156" />
+                    End="0,21.0109682299546" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,21.535088428156"
-                    Point2="0,25.535088428156"
-                    Point3="-4,25.535088428156" />
+                    Point1="0,21.0109682299546"
+                    Point2="0,25.0109682299546"
+                    Point3="-4,25.0109682299546" />
                   <mssgle:LineSegment
-                    End="-42.3333315898975,25.535088428156" />
+                    End="-23.7777777777777,25.0109682299546" />
                   <mssgle:CubicBezierSegment
-                    Point1="-42.3333315898975,25.535088428156"
-                    Point2="-46.3333315898975,25.535088428156"
-                    Point3="-46.3333315898975,29.535088428156" />
+                    Point1="-23.7777777777777,25.0109682299546"
+                    Point2="-27.7777777777777,25.0109682299546"
+                    Point3="-27.7777777777777,29.0109682299546" />
                   <mssgle:LineSegment
-                    End="-46.3333315898975,43.5701768563119" />
+                    End="-27.7777777777777,54.1874999999998" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-68.8278767324487,30.535088428156,91.322421875,11.4677734375"
+              BoundingBox="-59.5500998263889,30.0109682299546,91.322421875,11.4677734375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\FLC_SalesFiles\DF_Sales_Validation.Paths[Lookup No Match Output2]"
-          TopLeft="545.333320995172,239.999994128942">
+          TopLeft="592.277777777778,465.25">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="136.333343734344,51.333331157764"
+              EndConnector="20.5555555555555,62.0208333333334"
               Start="0,0"
-              End="128.833343734344,51.333331157764">
+              End="20.5555555555555,54.5208333333334">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="64.1666718671718,0" />
+                    End="0,21.2562270143765" />
                   <mssgle:CubicBezierSegment
-                    Point1="64.1666718671718,0"
-                    Point2="68.1666718671718,0"
-                    Point3="68.1666718671718,4" />
+                    Point1="0,21.2562270143765"
+                    Point2="0,25.2562270143765"
+                    Point3="4,25.2562270143765" />
                   <mssgle:LineSegment
-                    End="68.1666718671718,47.333331157764" />
+                    End="16.5555555555555,25.2562270143765" />
                   <mssgle:CubicBezierSegment
-                    Point1="68.1666718671718,47.333331157764"
-                    Point2="68.1666718671718,51.333331157764"
-                    Point3="72.1666718671718,51.333331157764" />
+                    Point1="16.5555555555555,25.2562270143765"
+                    Point2="20.5555555555555,25.2562270143765"
+                    Point3="20.5555555555555,29.2562270143765" />
                   <mssgle:LineSegment
-                    End="128.833343734344,51.333331157764" />
+                    End="20.5555555555555,54.5208333333334" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="12.3602851484218,-17.609375,111.6127734375,11.609375"
+              BoundingBox="-45.5286089409722,30.2562270143765,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\FLC_SalesFiles\DF_Sales_Validation.Paths[Lookup No Match Output1]"
-          TopLeft="567.66665400068,153.666663358609">
+          TopLeft="590.388888888889,361.229166666666">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="124.33333097895,62.6666641632717"
+              EndConnector="-216.555555555556,61.6875000000001"
               Start="0,0"
-              End="116.83333097895,62.6666641632717">
+              End="-216.555555555556,54.1875000000001">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="58.166665489475,0" />
+                    End="0,21.0854898336414" />
                   <mssgle:CubicBezierSegment
-                    Point1="58.166665489475,0"
-                    Point2="62.166665489475,0"
-                    Point3="62.166665489475,4" />
+                    Point1="0,21.0854898336414"
+                    Point2="0,25.0854898336414"
+                    Point3="-4,25.0854898336414" />
                   <mssgle:LineSegment
-                    End="62.166665489475,58.6666641632717" />
+                    End="-212.555555555556,25.0854898336414" />
                   <mssgle:CubicBezierSegment
-                    Point1="62.166665489475,58.6666641632717"
-                    Point2="62.166665489475,62.6666641632717"
-                    Point3="66.166665489475,62.6666641632717" />
+                    Point1="-212.555555555556,25.0854898336414"
+                    Point2="-216.555555555556,25.0854898336414"
+                    Point3="-216.555555555556,29.0854898336414" />
                   <mssgle:LineSegment
-                    End="116.83333097895,62.6666641632717" />
+                    End="-216.555555555556,54.1875000000001" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="6.360278770725,-17.609375,111.6127734375,11.609375"
+              BoundingBox="-164.084164496528,30.0854898336414,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\FLC_SalesFiles\DF_Sales_Validation.Paths[Lookup No Match Output]"
-          TopLeft="577.708315435176,77.9649130141195">
+          TopLeft="588.833333333333,256.874999999999">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="125.291663613792,25.3684178754235"
+              EndConnector="-225,61.6875000000001"
               Start="0,0"
-              End="117.791663613792,25.3684178754235">
+              End="-225,54.1875000000001">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="58.645831806896,0" />
+                    End="0,21.060546875" />
                   <mssgle:CubicBezierSegment
-                    Point1="58.645831806896,0"
-                    Point2="62.645831806896,0"
-                    Point3="62.645831806896,4" />
+                    Point1="0,21.060546875"
+                    Point2="0,25.060546875"
+                    Point3="-4,25.060546875" />
                   <mssgle:LineSegment
-                    End="62.645831806896,21.3684178754235" />
+                    End="-221,25.060546875" />
                   <mssgle:CubicBezierSegment
-                    Point1="62.645831806896,21.3684178754235"
-                    Point2="62.645831806896,25.3684178754235"
-                    Point3="66.645831806896,25.3684178754235" />
+                    Point1="-221,25.060546875"
+                    Point2="-225,25.060546875"
+                    Point3="-225,29.060546875" />
                   <mssgle:LineSegment
-                    End="117.791663613792,25.3684178754235" />
+                    End="-225,54.1875000000001" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="6.839445088146,-17.609375,111.6127734375,11.609375"
+              BoundingBox="-168.30638671875,30.060546875,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\FLC_SalesFiles\DF_Sales_Validation.Paths[Lookup Match Output2]"
-          TopLeft="499.020818051261,99.2982463474528">
+          TopLeft="636.833333333333,256.874999999999">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,33.0350836778229"
+              EndConnector="-24,61.6875000000001"
               Start="0,0"
-              End="0,25.5350836778229">
+              End="-24,54.1875000000001">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.5350836778229" />
+                    End="0,21.060546875" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.060546875"
+                    Point2="0,25.060546875"
+                    Point3="-4,25.060546875" />
+                  <mssgle:LineSegment
+                    End="-20,25.060546875" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-20,25.060546875"
+                    Point2="-24,25.060546875"
+                    Point3="-24,29.060546875" />
+                  <mssgle:LineSegment
+                    End="-24,54.1875000000001" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,6.96285433891145,96.3827734375,11.609375"
+              BoundingBox="-60.19138671875,30.060546875,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\FLC_SalesFiles\DF_Sales_Validation.Paths[Lookup Match Output1]"
-          TopLeft="496.333320667347,174.999996691942">
+          TopLeft="635.277777777778,361.229166666666">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-16.6666663388413,43.9999974370002"
+              EndConnector="-22.4444444444445,62.0208333333334"
               Start="0,0"
-              End="-16.6666663388413,36.4999974370002">
+              End="-22.4444444444445,54.5208333333334">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,17.9999987185001" />
+                    End="0,21.2210412815773" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,17.9999987185001"
-                    Point2="0,21.9999987185001"
-                    Point3="-4,21.9999987185001" />
+                    Point1="0,21.2210412815773"
+                    Point2="0,25.2210412815773"
+                    Point3="-4,25.2210412815773" />
                   <mssgle:LineSegment
-                    End="-12.6666663388413,21.9999987185001" />
+                    End="-18.4444444444445,25.2210412815773" />
                   <mssgle:CubicBezierSegment
-                    Point1="-12.6666663388413,21.9999987185001"
-                    Point2="-16.6666663388413,21.9999987185001"
-                    Point3="-16.6666663388413,25.9999987185001" />
+                    Point1="-18.4444444444445,25.2210412815773"
+                    Point2="-22.4444444444445,25.2210412815773"
+                    Point3="-22.4444444444445,29.2210412815773" />
                   <mssgle:LineSegment
-                    End="-16.6666663388413,36.4999974370002" />
+                    End="-22.4444444444445,54.5208333333334" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-56.5247198881707,26.9999987185001,96.3827734375,11.609375"
+              BoundingBox="-59.4136089409722,30.2210412815773,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\FLC_SalesFiles\DF_Sales_Validation.Paths[Lookup Match Output]"
-          TopLeft="479.666654328505,260.999994128942">
+          TopLeft="633.388888888889,465.25">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="11.0000008940696,68.3333300252759"
+              EndConnector="254.444444444444,62.0208333333333"
               Start="0,0"
-              End="11.0000008940696,60.8333300252759">
+              End="254.444444444444,54.5208333333333">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,30.1666650126379" />
+                    End="0,21.2562270143764" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,30.1666650126379"
-                    Point2="0,34.1666650126379"
-                    Point3="4,34.1666650126379" />
+                    Point1="0,21.2562270143764"
+                    Point2="0,25.2562270143764"
+                    Point3="4,25.2562270143764" />
                   <mssgle:LineSegment
-                    End="7.00000089406956,34.1666650126379" />
+                    End="250.444444444444,25.2562270143764" />
                   <mssgle:CubicBezierSegment
-                    Point1="7.00000089406956,34.1666650126379"
-                    Point2="11.0000008940696,34.1666650126379"
-                    Point3="11.0000008940696,38.1666650126379" />
+                    Point1="250.444444444444,25.2562270143764"
+                    Point2="254.444444444444,25.2562270143764"
+                    Point3="254.444444444444,29.2562270143764" />
                   <mssgle:LineSegment
-                    End="11.0000008940696,60.8333300252759" />
+                    End="254.444444444444,54.5208333333333" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-42.6913862717152,39.1666650126379,96.3827734375,11.609375"
+              BoundingBox="79.0308355034722,30.2562270143764,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\FLC_SalesFiles\DF_Sales_Validation.Paths[Invalid_UnitPrice]"
-          TopLeft="240.208327259248,124.771926476134">
+          TopLeft="912.611111111111,152.520833333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-46.3333315898975,51.0701768563119"
+              EndConnector="-27.7777777777777,61.6874999999998"
               Start="0,0"
-              End="-46.3333315898975,43.5701768563119">
+              End="-27.7777777777777,54.1874999999998">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,21.535088428156" />
+                    End="0,21.0109682299546" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,21.535088428156"
-                    Point2="0,25.535088428156"
-                    Point3="-4,25.535088428156" />
+                    Point1="0,21.0109682299546"
+                    Point2="0,25.0109682299546"
+                    Point3="-4,25.0109682299546" />
                   <mssgle:LineSegment
-                    End="-42.3333315898975,25.535088428156" />
+                    End="-23.7777777777777,25.0109682299546" />
                   <mssgle:CubicBezierSegment
-                    Point1="-42.3333315898975,25.535088428156"
-                    Point2="-46.3333315898975,25.535088428156"
-                    Point3="-46.3333315898975,29.535088428156" />
+                    Point1="-23.7777777777777,25.0109682299546"
+                    Point2="-27.7777777777777,25.0109682299546"
+                    Point3="-27.7777777777777,29.0109682299546" />
                   <mssgle:LineSegment
-                    End="-46.3333315898975,43.5701768563119" />
+                    End="-27.7777777777777,54.1874999999998" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-60.8846150136987,30.535088428156,75.4358984375,11.0625"
+              BoundingBox="-51.6068381076389,30.0109682299546,75.4358984375,11.0625"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\FLC_SalesFiles\DF_Sales_Validation.Paths[Invalid_SaleDate]"
-          TopLeft="240.208327259248,124.771926476134">
+          TopLeft="912.611111111111,152.520833333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-46.3333315898975,51.0701768563119"
+              EndConnector="-27.7777777777777,61.6874999999998"
               Start="0,0"
-              End="-46.3333315898975,43.5701768563119">
+              End="-27.7777777777777,54.1874999999998">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,21.535088428156" />
+                    End="0,21.0109682299546" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,21.535088428156"
-                    Point2="0,25.535088428156"
-                    Point3="-4,25.535088428156" />
+                    Point1="0,21.0109682299546"
+                    Point2="0,25.0109682299546"
+                    Point3="-4,25.0109682299546" />
                   <mssgle:LineSegment
-                    End="-42.3333315898975,25.535088428156" />
+                    End="-23.7777777777777,25.0109682299546" />
                   <mssgle:CubicBezierSegment
-                    Point1="-42.3333315898975,25.535088428156"
-                    Point2="-46.3333315898975,25.535088428156"
-                    Point3="-46.3333315898975,29.535088428156" />
+                    Point1="-23.7777777777777,25.0109682299546"
+                    Point2="-27.7777777777777,25.0109682299546"
+                    Point3="-27.7777777777777,29.0109682299546" />
                   <mssgle:LineSegment
-                    End="-46.3333315898975,43.5701768563119" />
+                    End="-27.7777777777777,54.1874999999998" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-60.8646150136987,30.535088428156,75.3958984375,11.0625"
+              BoundingBox="-51.5868381076389,30.0109682299546,75.3958984375,11.0625"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\FLC_SalesFiles\DF_Sales_Validation.Paths[Invalid_Quantity]"
-          TopLeft="240.208327259248,124.771926476134">
+          TopLeft="912.611111111111,152.520833333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-46.3333315898975,51.0701768563119"
+              EndConnector="-27.7777777777777,61.6874999999998"
               Start="0,0"
-              End="-46.3333315898975,43.5701768563119">
+              End="-27.7777777777777,54.1874999999998">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,21.535088428156" />
+                    End="0,21.0109682299546" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,21.535088428156"
-                    Point2="0,25.535088428156"
-                    Point3="-4,25.535088428156" />
+                    Point1="0,21.0109682299546"
+                    Point2="0,25.0109682299546"
+                    Point3="-4,25.0109682299546" />
                   <mssgle:LineSegment
-                    End="-42.3333315898975,25.535088428156" />
+                    End="-23.7777777777777,25.0109682299546" />
                   <mssgle:CubicBezierSegment
-                    Point1="-42.3333315898975,25.535088428156"
-                    Point2="-46.3333315898975,25.535088428156"
-                    Point3="-46.3333315898975,29.535088428156" />
+                    Point1="-23.7777777777777,25.0109682299546"
+                    Point2="-27.7777777777777,25.0109682299546"
+                    Point3="-27.7777777777777,29.0109682299546" />
                   <mssgle:LineSegment
-                    End="-46.3333315898975,43.5701768563119" />
+                    End="-27.7777777777777,54.1874999999998" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-60.2002009511988,30.535088428156,74.0670703125,11.609375"
+              BoundingBox="-50.9224240451389,30.0109682299546,74.0670703125,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\FLC_SalesFiles\DF_Sales_Validation.Paths[Duplicate_SaleID]"
-          TopLeft="240.208327259248,124.771926476134">
+          TopLeft="912.611111111111,152.520833333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-46.3333315898975,51.0701768563119"
+              EndConnector="-27.7777777777777,61.6874999999998"
               Start="0,0"
-              End="-46.3333315898975,43.5701768563119">
+              End="-27.7777777777777,54.1874999999998">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,21.535088428156" />
+                    End="0,21.0109682299546" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,21.535088428156"
-                    Point2="0,25.535088428156"
-                    Point3="-4,25.535088428156" />
+                    Point1="0,21.0109682299546"
+                    Point2="0,25.0109682299546"
+                    Point3="-4,25.0109682299546" />
                   <mssgle:LineSegment
-                    End="-42.3333315898975,25.535088428156" />
+                    End="-23.7777777777777,25.0109682299546" />
                   <mssgle:CubicBezierSegment
-                    Point1="-42.3333315898975,25.535088428156"
-                    Point2="-46.3333315898975,25.535088428156"
-                    Point3="-46.3333315898975,29.535088428156" />
+                    Point1="-23.7777777777777,25.0109682299546"
+                    Point2="-27.7777777777777,25.0109682299546"
+                    Point3="-27.7777777777777,29.0109682299546" />
                   <mssgle:LineSegment
-                    End="-46.3333315898975,43.5701768563119" />
+                    End="-27.7777777777777,54.1874999999998" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-61.2778767324488,30.535088428156,76.222421875,11.609375"
+              BoundingBox="-52.0000998263889,30.0109682299546,76.222421875,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\FLC_SalesFiles\DF_Sales_Validation.Paths[Derived Column Output4]"
-          TopLeft="896.333331396182,291.333325286706">
+          TopLeft="612.833333333333,569.9375">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="146.999973565341,10.9999996721744"
+              EndConnector="0,61.6875000000001"
               Start="0,0"
-              End="139.499973565341,10.9999996721744">
+              End="0,54.1875000000001">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="69.4999867826704,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="69.4999867826704,0"
-                    Point2="73.4999867826704,0"
-                    Point3="73.4999867826704,4" />
-                  <mssgle:LineSegment
-                    End="73.4999867826704,6.9999996721744" />
-                  <mssgle:CubicBezierSegment
-                    Point1="73.4999867826704,6.9999996721744"
-                    Point2="73.4999867826704,10.9999996721744"
-                    Point3="77.4999867826704,10.9999996721744" />
-                  <mssgle:LineSegment
-                    End="139.499973565341,10.9999996721744" />
+                    End="0,54.1875000000001" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7591,30 +7591,18 @@ FROM dbo.StgSales S;</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\FLC_SalesFiles\DF_Sales_Validation.Paths[Derived Column Output3]"
-          TopLeft="490.666655222575,371.999990820885">
+          TopLeft="887.833333333333,569.937499999999">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-18.3333334823446,32.3333310981592"
+              EndConnector="0,61.6875000000001"
               Start="0,0"
-              End="-18.3333334823446,24.8333310981592">
+              End="0,54.1875000000001">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,12.1666655490796" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,12.1666655490796"
-                    Point2="0,16.1666655490796"
-                    Point3="-4,16.1666655490796" />
-                  <mssgle:LineSegment
-                    End="-14.3333334823446,16.1666655490796" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-14.3333334823446,16.1666655490796"
-                    Point2="-18.3333334823446,16.1666655490796"
-                    Point3="-18.3333334823446,20.1666655490796" />
-                  <mssgle:LineSegment
-                    End="-18.3333334823446,24.8333310981592" />
+                    End="0,54.1875000000001" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7625,18 +7613,30 @@ FROM dbo.StgSales S;</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\FLC_SalesFiles\DF_Sales_Validation.Paths[Derived Column Output2]"
-          TopLeft="937.666645715635,101.833330934246">
+          TopLeft="363.833333333333,361.229166666666">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="108.666657070319,0"
+              EndConnector="-259,61.6875000000001"
               Start="0,0"
-              End="101.166657070319,0">
+              End="-259,54.1875000000001">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="101.166657070319,0" />
+                    End="0,26.84375" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26.84375"
+                    Point2="0,30.84375"
+                    Point3="-4,30.84375" />
+                  <mssgle:LineSegment
+                    End="-255,30.84375" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-255,30.84375"
+                    Point2="-259,30.84375"
+                    Point3="-259,34.84375" />
+                  <mssgle:LineSegment
+                    End="-259,54.1875000000001" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7647,18 +7647,30 @@ FROM dbo.StgSales S;</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\FLC_SalesFiles\DF_Sales_Validation.Paths[Derived Column Output1]"
-          TopLeft="917.333318312963,219.333327432474">
+          TopLeft="373.833333333333,465.583333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="114.333336522182,0"
+              EndConnector="-20,61.6875"
               Start="0,0"
-              End="106.833336522182,0">
+              End="-20,54.1875">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="106.833336522182,0" />
+                    End="0,26.84375" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26.84375"
+                    Point2="0,30.84375"
+                    Point3="-4,30.84375" />
+                  <mssgle:LineSegment
+                    End="-16,30.84375" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-16,30.84375"
+                    Point2="-20,30.84375"
+                    Point3="-20,34.84375" />
+                  <mssgle:LineSegment
+                    End="-20,54.1875" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7673,7 +7685,7 @@ FROM dbo.StgSales S;</property>
           FontInfo="{assembly:Null}"
           Size="53.3333333333334,40"
           Id="9ef81b0a-11a4-46a0-a9b7-1c4f9cc2be77"
-          TopLeft="187.666667054097,5.5" />
+          TopLeft="1026.16666666667,737.3125" />
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>

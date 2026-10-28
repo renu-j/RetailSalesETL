@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="LoadStores"
   DTS:PackageType="5"
-  DTS:VersionBuild="63"
-  DTS:VersionGUID="{B626ED0C-1893-46A1-B8B0-657720A56DA9}">
+  DTS:VersionBuild="65"
+  DTS:VersionGUID="{60548E71-E74C-4E8A-8CA9-66F2B6B916D7}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -141,7 +141,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAWoPjJrq/8UyjbhHw82lxlAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAo8N7yXMBqOCLzgmKiX5Z/eIdF+tx5fRd1e4XEvIkO9QAAAAAOgAAAAAIAACAAAABZOU0DnYwMNhu++JAfo7s+8BF7dTQN7blC0BBnXh1rWjAAAADtZMPB3QaoJ35m20+LUXQTz8GD61tEXBs00ABNHAPumwz1bmTRiuooMWyzHgq4BJ1AAAAAKtPyieGZnWjbXkhDXMr+J/FCpMyVMwtglx3PWCKR7dGpc46gwrC+HjcRp7CDMgvMSE2oVpFuBHFRdPngWqNkOA</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAWoPjJrq/8UyjbhHw82lxlAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC/xUJwjQbHUpL/xqQOXrysU1rEfM8kH+MfZLO7HfspDQAAAAAOgAAAAAIAACAAAABglxoIWRdb5JTzkb7lln9xpJpsQlIO6FDFInIlAcTOjjAAAAA47UV5rFt02SFoK7J7GKLGjzR/Pkx+8mcGOoouENau/kyOQg8fbHocMmzxrdw24kdAAAAAbzjAsEGLXIn3Vt2rMo+vICHDNOqA385G5XaJ2Mgi/UnP9X0+tY9kE4PLYEdHUu0fJXrDV86T4J1ufYBWqnV9Dg</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -158,7 +158,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAWoPjJrq/8UyjbhHw82lxlAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACOa53nwBhdeLI0bhUfznVNELSZkhqznN7m6Kvb7Arx3QAAAAAOgAAAAAIAACAAAAAEa71X/4pn0DwzWhPTVK8wXNO+rdCMZ9ZVovfgxe2bmzAAAADoHHP+PebChQFQJFqImgzosmfSYm+OFUqg9dcMBbpapYlH1zNvEZZHUDCyvocHe7hAAAAAt3F0a5n6HDXluAgcfr+a2zEjnQ5tjqfdWdoUMGnzWjnc5xTEzW/SPR6a2VbEQEyO46bIoBUo63T4bMjujCX9VA</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAWoPjJrq/8UyjbhHw82lxlAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADwzAFic/oDTJ7yzhjeeb9n7sJm0/iXiRPSee2TardRWgAAAAAOgAAAAAIAACAAAADSa0A8Q6p3HFgkimw0uv74X6vcp0XtvsP6/vCa+oAquzAAAAAl9Cs73nzDO7zHh9i5rdUEffhZ1D1aotlyaANzKwYgxbfU3cZU0vz4Bu2SxzJByVlAAAAAU63IhJ69mrH+WR0v6wAEVl7Cd3pMSp4l4KZU+IlNXQ3pDMEnRjpEqizG+lrFG5PhCLSiqh7RGZBB9Tfi39LC9Q</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -175,7 +175,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAWoPjJrq/8UyjbhHw82lxlAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACP5uwE3APYpXA74lamoULRSdaxHsfxkYa5t1juMyGgEgAAAAAOgAAAAAIAACAAAAA9jJdgscWMdlhE1/vHe6kna9EFQFv8LcDSB8Ou8q1/tDAAAADbs4kmNVDBBXvHDG5WRYwTAeBtCeYvB6kunWwTHko3o2vATnm8lx+EEGU1jw2y83NAAAAAPuIex/hn+V8/MnyhtYO6V6duQ+Oi3o5PPrHrXDpz25JQkypnZLWRbzN6gfWzMQj4eb6ivSRo1AqZOv9vhBeS6w</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAWoPjJrq/8UyjbhHw82lxlAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAeDVLLZzVcG4cwwOpGPLltVXufBt7AJB8Ak7qvSptkPAAAAAAOgAAAAAIAACAAAABLQudO1jX+a6/DgbMzB1Nw5uFeX+7XykeyJRy2e4WVuDAAAABq+gys/Ph6D189sEK0SZE1rYub2Bl8Jae63TctYDaO2Y6fuwtgVyKxUIEqFE133VVAAAAABMRUf5S8KavU1LGmMcDLOG1HmOeIIF0dvmizPK0wE7eTDsUtXsLM3WpcTUgBjvjpxyW3Y+5NyoILDqI/ddR9yA</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -192,7 +192,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAWoPjJrq/8UyjbhHw82lxlAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAIRNXuQ0aK46eAvvqXsnq4LuJ44V27sxYk+AbM+VzHhgAAAAAOgAAAAAIAACAAAAC9zho9UvhqvY54SWFeAqtQdRD/cT3PbHNGsywToqPDyzAAAADqqn3Mg9d6Jn0g5lNKXXOg0HZX5XXq7LrJmm5P6fZ79zO+8pj5aeY4b4zFgTjW7S1AAAAAhfKaK1sggNpG1fgNWNhpO98uDaY7JXxLiEuBQAz+KEeFB3/DO10mP1w+bk0BbTBbKPjEG4wBjO6Zx1fUjY+g7g</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAWoPjJrq/8UyjbhHw82lxlAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABHj4JGF9wpxWSKiXRQoiDUn2qff569vyXA4bIWOwV00wAAAAAOgAAAAAIAACAAAACeWuRhoSJFkDmqjn0fONMSGh8W8CtGvo8DxdOUfnUqPDAAAADY633Nvy5qm7dvIZlsA2BuGu0OTR80mj7LvC5FiARrGCoejzzXZx1i3auYu+QEVwhAAAAA8wGjeKvGXoZn0d7Of8KuaqgGp1LWPM7wWeAczzoGlF+th2lBgb5NJjCx4GY9vEa+D8HMz9+ySXAflo5yoU3nRA</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -3093,9 +3093,7 @@ WHERE NULLIF(LTRIM(RTRIM(StoreID)), '') IS NOT NULL
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -3153,9 +3151,7 @@ WHERE NULLIF(LTRIM(RTRIM(StoreID)), '') IS NOT NULL
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -3189,9 +3185,7 @@ WHERE NULLIF(LTRIM(RTRIM(StoreID)), '') IS NOT NULL
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -3213,9 +3207,7 @@ WHERE NULLIF(LTRIM(RTRIM(StoreID)), '') IS NOT NULL
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

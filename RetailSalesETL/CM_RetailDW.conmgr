@@ -9,6 +9,10 @@
     <DTS:ConnectionManager
       DTS:ConnectRetryCount="1"
       DTS:ConnectRetryInterval="5"
-      DTS:ConnectionString="Data Source=ICS-LT-G2X1HK3\SQLEXPRESS;User ID=sa;Initial Catalog=RetailDW;Provider=MSOLEDBSQL19.1;Persist Security Info=True;Application Name=SSIS-{12AD7B36-9583-4DAC-A73D-54C4BDD19E6B}ICS-LT-G2X1HK3_SQLEXPRESS.RetailDW.sa1;Trust Server Certificate=True;" />
+      DTS:ConnectionString="Data Source=ICS-LT-G2X1HK3\SQLEXPRESS;User ID=sa;Initial Catalog=RetailDW;Provider=MSOLEDBSQL19.1;Persist Security Info=True;Trust Server Certificate=True;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAWoPjJrq/8UyjbhHw82lxlAAAAAACAAAAAAAQZgAAAAEAACAAAAD5eSixsg5YCEorVR0Y3Ja1zGriR7CMpbhf2PSO75dzHwAAAAAOgAAAAAIAACAAAADn8NYv0Y60aozbJQ3YVv7mSvFZtC1aj2UB58z1d4f8coAAAABGj8/bOvLC7eC3ZMsoFolxegO5rWxbCwRzqRrqo1NxPIF8F5+/a6vLEBF6ORGnJveIoJlcjNstnhgNd+zRVjc7zbx1eG1STz9yb/wlNCgPsQgYktxKUFcMl8sufMT3MpUIgeyvnlMeSxHkryygkESB5cYq/T2/oroIQqtQsQY+V0AAAAA7To5EFdcJW87UfS2AX33BzLfj71dzUwrwwJF6FcVi7uhEbrW4EkSQY1nSRsprhGCn4WbWmxD43UhXhb6C2X65</DTS:Password>
+    </DTS:ConnectionManager>
   </DTS:ObjectData>
 </DTS:ConnectionManager>

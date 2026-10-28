@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="65"
-  DTS:VersionGUID="{A54732EB-C6A9-43AD-9386-A44DB8BC0F67}">
+  DTS:VersionBuild="71"
+  DTS:VersionGUID="{9752F5CF-A30C-45DE-93F0-2E2D52F2AFF0}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -4355,7 +4355,7 @@ FROM dbo.StgProduct;</property>
       DTS:LocaleID="-1"
       DTS:ObjectName="FST_ArchiveProductFile"
       DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <FileSystemData
@@ -4375,7 +4375,7 @@ FROM dbo.StgProduct;</property>
       DTS:LocaleID="-1"
       DTS:ObjectName="FST_ErrorProductFile"
       DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <FileSystemData
@@ -4429,7 +4429,7 @@ FROM dbo.StgProduct;</property>
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_Audit_Success"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -4463,7 +4463,7 @@ FROM dbo.StgProduct;</property>
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_FileImport_Error"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -4517,7 +4517,7 @@ FROM dbo.StgProduct;</property>
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_FileImport_Success"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -4821,7 +4821,7 @@ FROM dbo.StgProduct;</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-121.195707383172,39.8181901561762,30.4826953125,9.7490234375"
+              BoundingBox="-130.074680989583,25.5555555555556,30.4826953125,9.7490234375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -4947,7 +4947,7 @@ FROM dbo.StgProduct;</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="273.925311969618,23.6803892043769,30.4826953125,9.7490234375"
+              BoundingBox="-35.1080143229167,294.193941573752,30.4826953125,9.7490234375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -4983,7 +4983,7 @@ FROM dbo.StgProduct;</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="234.048328281687,-21.2982034807355,30.4826953125,9.7490234375"
+              BoundingBox="24.4697634548611,126.18739791211,30.4826953125,9.7490234375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -5019,7 +5019,7 @@ FROM dbo.StgProduct;</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="171.988808311873,-37.3590473465238,30.4826953125,9.7490234375"
+              BoundingBox="37.6030967881944,79.3514598936286,30.4826953125,9.7490234375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -5055,7 +5055,7 @@ FROM dbo.StgProduct;</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="111.257660960789,-99.7830808636079,30.4826953125,9.7490234375"
+              BoundingBox="47.2919856770833,37.9158067041492,30.4826953125,9.7490234375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -5984,7 +5984,7 @@ FROM dbo.StgProduct;</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
